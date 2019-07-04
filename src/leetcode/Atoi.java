@@ -4,6 +4,7 @@ public class Atoi {
     // 核心概念: 空白不處理, 檢查sign, 檢查 overflow, 由左開始掃文字, 在 while 迴圈裡結果*10 + 目前數字
 
     private static final int maxDiv10 = Integer.MAX_VALUE / 10;
+
     public int atoi(String str) {
         int i = 0, n = str.length();
 

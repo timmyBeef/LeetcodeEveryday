@@ -29,7 +29,9 @@ public class SubarraySumEqualsK {
         for(int cur : nums) {
             sum += cur;
             // 因為 sum[0~j] = sum[0~i-1] + sum[i~j] (k)
-            // 所以 sum[0~j] - k = sum[0~i]
+            // 所以 sum[0~j] - k = sum[0~i-1]
+
+            // 所以 k = 2, sum =2, key = 0
             if(map.containsKey(sum - k))  // there exist a key, that [hashmap-key  =  sum - k]
                 result += map.get(sum - k);
 
@@ -37,5 +39,11 @@ public class SubarraySumEqualsK {
             map.put(sum, map.getOrDefault(sum, 0) + 1);
         }
         return result;
+    }
+
+    public static void main(String args[]) {
+        int[] nums = {1,1,1};
+        int k = 2;
+        System.out.println(new SubarraySumEqualsK().subarraySum(nums, k));
     }
 }

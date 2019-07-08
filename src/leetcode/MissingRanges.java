@@ -4,32 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MissingRanges {
-    public List<String> findMissingRanges(int[] nums, int lower, int upper) {
-        List<String> list = new ArrayList<>();
-        int i = 0;
-        while(i < nums.length) {
-            if(nums[i] >= lower && nums[i] <= upper && i != nums.length - 1) {
 
-
-                int diff = nums[i + 1] - nums[i];
-                if (diff > 1) {
-                    if (diff == 2) {
-                        list.add(String.valueOf(nums[i] + 1));
-                    } else {
-                        list.add(String.valueOf(nums[i] + 1) + "->" + String.valueOf(nums[i + 1] - 1));
-                    }
-                }
-            } else {
-                break;
+    public List<String> findMissingRanges(int[] vals, int start, int end) {
+        List<String> ranges = new ArrayList<>();
+        int prev = start - 1;
+        for (int i = 0; i <= vals.length; i++) {
+            int curr = (i == vals.length) ? end + 1 : vals[i];
+            if (curr - prev >= 2) {
+                ranges.add(getRange(prev + 1, curr - 1));
             }
-            i++;
+            prev = curr;
         }
-        return list;
+        return ranges;
     }
+    private String getRange(int from, int to) {
+        return (from == to) ? String.valueOf(from) : from + "->" + to;
+    }
+
 
     public static void main(String[] args) {
         int[] nums = {0, 1, 3, 50, 75};
-        System.out.println(new MissingRanges().findMissingRanges(nums, 0, 100));
+        System.out.println(new MissingRanges().findMissingRanges(nums, 0, 99));
 
 
     }

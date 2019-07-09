@@ -3,9 +3,15 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+// https://leetcode.com/problems/two-sum/solution/
 //用一個 map 把經過的值存起來, 檢查 (target - 下個值), 是不是存在 map 中了
 // ,一一比對, 存在代表得到答案了, 回傳 index
 
+// Time complexity : O(n^2)
+// For each element, we try to find its complement by looping through
+// the rest of array which takes O(n)O(n) time. Therefore, the time complexity is O(n^2)
+
+// Space complexity : O(1) 因為用 map
 class TwoSum {
     public int[] twoSum(int[] numbers, int target) {
         Map<Integer, Integer> map = new HashMap<>();

@@ -13,6 +13,13 @@ public class IntersectionTwoArrays {
         return Arrays.stream(nums1).distinct().filter(e -> set.contains(e)).toArray();
     }
 
+    //用兩個 SET 去做
+    //Time complexity : O(n + m), where n and m are arrays' lengths.
+    // O(n) time is used to convert nums1 into set,
+    // O(m) time is used to convert nums2, and contains/in operations are
+    // O(1) in the average case.
+    //
+    //Space complexity : O(m+n) in the worst case when all elements in the arrays are different.
     public int[] intersectionBySet(int[] nums1, int[] nums2) {
         Set<Integer> set = new HashSet<>();
         Set<Integer> intersect = new HashSet<>();

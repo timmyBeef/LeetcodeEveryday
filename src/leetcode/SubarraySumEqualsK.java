@@ -1,9 +1,13 @@
 package leetcode;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class SubarraySumEqualsK {
     // https://leetcode.com/problems/subarray-sum-equals-k/
+
+    // 解題概念: presum + twosum 的解法
+    // presum 就是 0~i-1 的加總, 我們計算出每個位置的 presum 記錄起來
 
     public int subarraySum(int[] nums, int k) {
         // Edge cases
@@ -25,7 +29,7 @@ public class SubarraySumEqualsK {
         HashMap<Integer, Integer> map = new HashMap<>();
         int sum = 0;
         int result = 0;
-        map.put(0, 1);
+        map.put(0, 1); //!!!!
         for(int cur : nums) {
             sum += cur;
             // 因為 sum[0~j] = sum[0~i-1] + sum[i~j] (k)
@@ -40,6 +44,7 @@ public class SubarraySumEqualsK {
         }
         return result;
     }
+
 
     public static void main(String args[]) {
         int[] nums = {1,1,1};

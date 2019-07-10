@@ -3,6 +3,8 @@ package leetcode;
 
 // https://leetcode.com/problems/diameter-of-binary-tree/
 
+// use DFS
+
 //The diameter of a binary tree
 //is the length of the longest path between any two nodes in a tree.
 
@@ -13,6 +15,12 @@ package leetcode;
 //recursively and update diameter all the way.
 
 // 注意結果是看 max, 要得是 max(node.leftDepth + node.rightDepth)
+
+/*
+Time Complexity: O(N). We visit every node once.
+
+Space Complexity: O(N), the size of our implicit call stack during our depth-first search.
+*/
 public class DiameterOfBinaryTree {
     int max = 0;
 

@@ -2,6 +2,9 @@ package leetcode;
 
 import java.util.Arrays;
 
+// https://leetcode.com/problems/merge-sorted-array/
+
+// Two pointers / Start from the beginning
 public class MergeSortedArray {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {

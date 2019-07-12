@@ -3,7 +3,22 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
+
 /*
+一樣先計算 presum
+
+map.put(0, -1);
+
+跑迴圈
+更新 sum = sum%k  // 取得 % 後的 key
+如果之後遇到 map.containsKey(sum) // 如果之後又遇到, 代表你和上一個發生 這個% 後的 key, 相差了 k倍 !
+if (i - map.get(sum) > 1) // 所以看一下 index 和上次發生的 index 是不是 比 1 大, 代表中間有隔一個數, 所以是連續的
+return true;
+} else {
+    // 紀錄 % 後的 key
+}
+其他都false
+
 Now, assume that the given sum value at the i-th
   index be equal to remrem. Now, if any subarray follows the i-th
   element, which has a sum equal to the integer multiple of k, say extending upto the j-th
@@ -11,6 +26,11 @@ Now, assume that the given sum value at the i-th
   will be: (rem+n∗k), where n is some integer > 0.
   We can observe that  rem(rem+n∗k), which is the same value as stored corresponding
   to the i-th index..
+
+  Time complexity : O(n). Only one traversal of the array numsnums is done.
+
+  Space complexity : O(min(n,k)). The HashMap can contain upto
+                     min(n,k) different pairings.
 */
 public class ContinuousSubarraySum {
     public boolean checkSubarraySum(int[] nums, int k) {
@@ -20,12 +40,12 @@ public class ContinuousSubarraySum {
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
             if (k != 0)
-                sum = sum % k; // 紀錄 % 後的 key
+                sum = sum % k; // 取得 % 後的 key
             if (map.containsKey(sum)) { // 如果之後又遇到, 代表你和上一個發生 這個% 後的 key, 相差了 k倍 !
                 if (i - map.get(sum) > 1) // 所以看一下 index 和上次發生的 index 是不是 比 1 大, 代表中間有隔一個數, 所以是連續的
                     return true;
             } else
-                map.put(sum, i);
+                map.put(sum, i);// 紀錄 % 後的 key
         }
         return false;
     }

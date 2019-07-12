@@ -7,6 +7,7 @@ import java.util.Arrays;
 // use two point i, j
 // 先計算最後面的結果, 因為原題是排序過的 有正負的序列
 // 所以兩個 poninter 用來比較頭尾,
+// 輪流比較頭尾
 // 如果abs 後, 頭大於尾 i ++
 // 塞入index i 的此值的平方
 // 如果尾比較大 j--

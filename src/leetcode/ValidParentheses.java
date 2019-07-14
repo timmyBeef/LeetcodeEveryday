@@ -6,6 +6,14 @@ import java.util.HashMap;
 import java.util.Stack;
 
 // use stack, 可看 SOLUTION 最下面的圖解
+/*
+Time complexity : O(n)
+because we simply traverse the given string one character at a time and push and pop
+operations on a stack take O(1)O(1) time.
+
+Space complexity : O(n) as we push all opening brackets onto the stack and in the worst case,
+we will end up pushing all the brackets onto the stack. e.g. ((((((((((.
+ */
 public class ValidParentheses {
     public boolean isValid(String s) {
         HashMap<Character, Character> map = new HashMap<>();
@@ -25,7 +33,7 @@ public class ValidParentheses {
                     return false;
                 }
             } else {
-                stack.push(c);
+                stack.push(c); //push value（左符號）, 用key檢查（右符號）, 因為不可能是 右開頭 這樣必錯
             }
         }
 

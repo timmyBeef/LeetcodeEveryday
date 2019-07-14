@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.trees;
 
 import java.util.Arrays;
 import java.util.LinkedList;

@@ -1,8 +1,6 @@
-package leetcode;
+package leetcode.intervals;
 
-import java.sql.Time;
 import java.util.Arrays;
-import java.util.Comparator;
 
 /*
     https://leetcode.com/problems/meeting-rooms-ii/

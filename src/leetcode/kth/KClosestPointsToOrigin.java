@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.kth;
 
 
 import java.util.Arrays;

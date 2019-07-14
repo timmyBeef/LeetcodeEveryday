@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.intervals;
 
 // https://leetcode.com/problems/meeting-rooms/
 

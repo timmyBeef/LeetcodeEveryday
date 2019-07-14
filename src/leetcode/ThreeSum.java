@@ -5,6 +5,8 @@ import java.util.*;
 public class ThreeSum {
 
 /*
+https://leetcode.com/problems/3sum/
+
     題目是要找出3數和為0的資料
 
     主要思想是，遍歷數組，用0減去當前的數，作為sum，然後再找兩個數使得和為sum。

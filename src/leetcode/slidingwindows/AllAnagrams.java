@@ -1,13 +1,87 @@
-package leetcode;
+package leetcode.slidingwindows;
 
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 // https://leetcode.com/problems/find-all-anagrams-in-a-string/
+
+/*      Input:
+        s: "cbaebabacd" p: "abc"
+
+        Output:
+        [0, 6]
+
+        Explanation:
+        The substring with start index = 0 is "cba", which is an anagram of "abc".
+        The substring with start index = 6 is "bac", which is an anagram of "abc".
+
+
+        Input:
+        s: "abab" p: "ab"
+
+        Output:
+        [0, 1, 2]
+
+        Explanation:
+        The substring with start index = 0 is "ab", which is an anagram of "ab".
+        The substring with start index = 1 is "ba", which is an anagram of "ab".
+        The substring with start index = 2 is "ab", which is an anagram of "ab".
+*/
+
 public class AllAnagrams {
-    public List<Integer> findAnagrams(String s, String p) {
+
+    // use template
+    public List<Integer> findAnagrams(String s, String t) {
+        List<Integer> result = new ArrayList<>(); //不一樣的地方
+
+        if (t.length() > s.length()) return result;
+        Map<Character, Integer> map = new HashMap<>();
+        for (char c : t.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+        int counter = map.size();
+
+        int begin = 0, end = 0;
+
+        while (end < s.length()) {
+
+            // move right
+            char c = s.charAt(end);
+            if (map.containsKey(c)) {
+                map.put(c, map.get(c) - 1);
+                if (map.get(c) == 0) counter--;
+            }
+            end++;
+
+            while (counter == 0) { // 代表 match 完了
+
+                // move letf
+                // 所以左邊要開始繼續右移, 右移的過程中, 如果是原本符合的字, 要把 map 對應的 count +回去
+                char tempc = s.charAt(begin);
+                if (map.containsKey(tempc)) {
+                    map.put(tempc, map.get(tempc) + 1);
+                    if (map.get(tempc) > 0) {
+                        counter++;
+                    }
+                }
+
+                //不一樣的地方
+                if(end-begin == t.length()){
+                    result.add(begin);
+                }
+
+                begin++; // move left
+            }
+
+        }
+        return result;
+    }
+
+    public List<Integer> findAnagrams2(String s, String p) {
         List<Integer> list = new ArrayList<>();
         if (s == null || s.length() == 0 || p == null || p.length() == 0) return list;
 
@@ -18,7 +92,9 @@ public class AllAnagrams {
             hash[c]++;
         }
         //two points, initialize count to p's length
-        int left = 0, right = 0, count = p.length();
+        int left = 0;
+        int right = 0;
+        int count = p.length(); // find string's length, so we should make this count to zero: means we find it.
 
         while (right < s.length()) {
             //move right everytime, if the character exists in p's hash, decrease the count
@@ -30,7 +106,7 @@ public class AllAnagrams {
             hash[s.charAt(right)]--;
             right++;
 
-            //when the count is down to 0, means we found the right anagram
+            //when the count is down to 0, means "we found the right anagram"
             //then add window's left to result list, 紀錄 left, 因為我們要的是 anagram 起始 index
             if (count == 0) {
                 list.add(left);
@@ -94,7 +170,7 @@ public class AllAnagrams {
     public static void main(String[] args) {
         String s = "cbaebabacd";
         String p = "abc";
-        System.out.println(new AllAnagrams().findAnagramsEasy(s, p).toString());
+        System.out.println(new AllAnagrams().findAnagrams(s, p).toString());
 
     }
 

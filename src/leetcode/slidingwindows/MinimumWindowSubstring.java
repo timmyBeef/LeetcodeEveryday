@@ -2,8 +2,7 @@ package leetcode.slidingwindows;
 
 import java.util.*;
 
-//https://leetcode.com/problems/minimum-window-substring/discuss/26811/Share-my-neat-java-solution
-
+//https://leetcode.com/problems/find-all-anagrams-in-a-string/discuss/92007/Sliding-Window-algorithm-template-to-solve-all-the-Leetcode-substring-search-problem.
 /*
      sliding windows
 

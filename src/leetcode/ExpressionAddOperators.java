@@ -22,17 +22,23 @@ import java.util.List;
 這樣5的計算結果就是62。
 
 因為要解決上述幾種情況，我們需要這麼幾個變量，
-一個是記錄上次的計算結果currRes，
-一個是記錄上次被加或者被減的數prevNum，
-一個是當前準備處理的數currNum。
+一個是記錄上次的計算結果 currRes，
+一個是記錄上次被加或者被減的數 prevNum，
+一個是當前準備處理的數 currNum。
 
 當下一輪搜索是加減法時， prevNum就是簡單換成currNum，
 當下一輪搜索是乘法時，prevNum是prevNum乘以currNum。
 
 
 第一次搜索不添加運算符，只添加數字，就不會出現+1+2這種表達式了。
+
 我們截出的數字不能包含0001這種前面有0的數字，但是一個0是可以的。這裡一旦截出的數字前導為0，
 就可以return了，因為說明前面就截的不對，從這之後都是開始為0的，後面也不可能了。
+
+helper (num, target, resStr, res, preNum)
+helper (要處理的 num 字串, target, 最後結果字串, 上次的計算結果(long), 上次被加或者被減的數(long))
+
+use long to avoid overflow
 
 */
 
@@ -46,16 +52,16 @@ public class ExpressionAddOperators {
 
     private void helper(String num, int target, String tmp, long currRes, long prevNum){
         // 如果计算结果等于目标值，且所有数都用完了，则是有效结果
-        if(currRes == target && num.length() == 0){
+        if(currRes == target && num.length() == 0){ //!!! 在最外圈！！！
             String exp = new String(tmp);
             res.add(exp);
-            return;
+            return; /// ！！！！ end!
         }
         // 搜索所有可能的拆分情况
-        for(int i = 1; i <= num.length(); i++){
+        for(int i = 1; i <= num.length(); i++){ //!!! i form 1 ro num end
             String currStr = num.substring(0, i);
             // 对于前导为0的数予以排除
-            if(currStr.length() > 1 && currStr.charAt(0) == '0'){
+            if(currStr.length() > 1 && currStr.charAt(0) == '0'){ //!!! 沒有currStr.length() > 1 && 的話 105 target 5 的答案 1*0 + 5, 會失敗, 0出不來
                 // 这里是return不是continue
                 return;
             }
@@ -77,5 +83,28 @@ public class ExpressionAddOperators {
             }
 
         }
+    }
+
+
+    public static void main(String args[]) {
+        /*
+            Input: num = "123", target = 6
+            Output: ["1+2+3", "1*2*3"]
+
+            Input: num = "00", target = 0
+            Output: ["0+0", "0-0", "0*0"]
+         */
+
+        String num = "123";
+        int target = 6;
+
+        List<String> res = new ExpressionAddOperators().addOperators(num, target);
+        res.stream().forEach(s -> System.out.println(s));
+
+        String num2 = "00";
+        int target2 = 0;
+
+        List<String> res2 = new ExpressionAddOperators().addOperators(num2, target2);
+        res2.stream().forEach(s -> System.out.println(s));
     }
 }

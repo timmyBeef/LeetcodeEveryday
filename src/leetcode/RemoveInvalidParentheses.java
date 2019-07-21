@@ -69,18 +69,19 @@ public class RemoveInvalidParentheses {
         int numOpenParen = 0, numClosedParen = 0;
 
         for (int i = iStart; i < s.length(); i++) {
-            if (s.charAt(i) == openParen) numOpenParen++;
+            if (s.charAt(i) == openParen) numOpenParen++;   //!!!
             if (s.charAt(i) == closedParen) numClosedParen++;
 
             if (numClosedParen > numOpenParen) { // We have an extra closed paren we need to remove
                 for (int j = jStart; j <= i; j++) { // Try removing one at each position, skipping duplicates
 
+                    // !! s.charAt(j) == closedParen  s.charAt(j - 1) != closedParen   not () correct
                     if (s.charAt(j) == closedParen && (j == jStart || s.charAt(j - 1) != closedParen)) {
                         // Recursion: iStart = i since we now have valid # closed parenthesis thru i.
                         // jStart = j prevents duplicates
                         // j == jStart , it means the first one is ')', it's already illegle, so no need to check j-1
                         String newStr = s.substring(0, j) + s.substring(j + 1, s.length());
-                        removeHelper(newStr, output, i, j, openParen, closedParen);
+                        removeHelper(newStr, output, i, j, openParen, closedParen); //!!
                     }
                 }
                 return; // Stop here. The recursive calls handle the rest of the string.
@@ -88,9 +89,9 @@ public class RemoveInvalidParentheses {
         }
         // No invalid closed parenthesis detected. Now check opposite direction,
         // or reverse back to original direction.
-        String reversed = new StringBuilder(s).reverse().toString();
+        String reversed = new StringBuilder(s).reverse().toString(); //!!
         if (openParen == '(')
-            removeHelper(reversed, output, 0, 0, ')', '(');
+            removeHelper(reversed, output, 0, 0, ')', '('); //!!!
         else
             output.add(reversed);
     }

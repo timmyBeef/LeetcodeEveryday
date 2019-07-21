@@ -25,7 +25,7 @@ public class MergeSortedArray {
         // 如果 nums2 還沒跑完, 要補完, 發生狀況是 nums1 都比較大的狀況下
         // add missing elements from nums2
         //System.arraycopy(nums2, 0, nums1, 0, p2 + 1);
-        while(p2 >=0)
+        while(p2 >=0) //!!!
             nums1[p--] = nums2[p2--];
     }
 

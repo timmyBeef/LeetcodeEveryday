@@ -47,4 +47,5 @@ public class IntervalListIntersections {
 
         return ans.toArray(new int[ans.size()][]);
     }
+
 }

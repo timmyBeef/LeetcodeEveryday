@@ -9,12 +9,27 @@ import java.util.Arrays;
 Input:  [1,2,3,4]
 Output: [24,12,8,6] => [1*2*3, 0*2*3, 0*1*3, 0*1*2]
 
-
+[a1*a2*a3, a0*a2*a3, a0*a1*a3, a0*a1*a2]
 目標：變成2陣列 相乘
+=>
+[1, a0, a0a1, a0a1a2]
+[a1a2a3, a2a3, a3 , 1]
 
-[1,      a0,   a0a1, a0a1a2]
 
-[a1a2a3, a2a3, a3  , 1     ]
+res[0] = 1;
+for (int i = 1; i < n; i++) { // from start
+    res[i] = res[i - 1] * nums[i - 1];
+}
+[1, a0, a0a1, a0a1a2]
+
+
+int right = 1;
+for (int i = n - 1; i >= 0; i--) { // from end
+    res[i] *= right;
+    right *= nums[i];
+}
+
+[a1a2a3, a2a3, a3  , 1]
 
 Note: Please solve it without division and in O(n).
 
@@ -76,26 +91,9 @@ public class ProductOfArrayExceptSelf {
         return res;
     }
 
-///prac
-    public int[] productExceptSelf2(int[] nums) {
-        int n = nums.length;
-        int res[] = new int[n];
-        res[0] = 1;
-
-        for(int i = 1; i < n ; i++) {
-            res[i] = res[i - 1] * nums[i - 1];
-        }
-
-        int right = 1;
-        for(int i = n-1; i >= 0; i--) {
-            res[i] *= right;
-            right *= nums[i];
-        }
-        return res;
-    }
 
     public static void main(String[] args) {
         int input[] = {1, 2, 3, 4};
-        System.out.println(Arrays.toString(new ProductOfArrayExceptSelf().productExceptSelf2(input)));
+        System.out.println(Arrays.toString(new ProductOfArrayExceptSelf().productExceptSelf(input)));
     }
 }

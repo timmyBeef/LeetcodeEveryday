@@ -1,58 +1,85 @@
 package leetcode;
 
+// https://leetcode.com/problems/add-binary/
+/*
+Input: a = "11", b = "1"
+Output: "100"
+
+
+Input: a = "1010", b = "1011"
+Output: "10101"
+
+use two pointer, all from the string end to caculate
+and a carry
+
+sum = carry
+
+add:
+if (i >= 0) sum += a.charAt(i--) - '0';
+if (j >= 0) sum += b.charAt(j--) - '0';
+
+sb append sum%2
+carry = sum/2
+
+if (carry != 0) sb.append(carry)
+at last, return the reverse of sb
+
+Time: O(max(m,n))
+Space: O(1),
+since the space we used for the StringBuilder is just the result,
+so I guess it does not count as extra space.
+
+ */
 public class AddBinary {
-    public String addBinary(String a, String b)
-    {
 
-        // Initialize result
-        String result = "";
+    public String addBinary(String a, String b) {
+        StringBuilder result = new StringBuilder();
+        int carry = 0;
+        int aIdx = a.length()-1;
+        int bIdx = b.length()-1;
 
-        // Initialize digit sum
-        int sum = 0;
+        while(aIdx >= 0 || bIdx >= 0) { //!!!
+            int sum = carry; //!!!
 
-        // Travers both strings starting
-        // from last characters
-        int i = a.length() - 1;
-        int j = b.length() - 1;
+            int aNum = aIdx >= 0 ? (a.charAt(aIdx) - '0') : 0; //!!! 注意index
+            int bNum = bIdx >= 0 ? (b.charAt(bIdx) - '0') : 0;
 
-        while (i >= 0 || j >= 0 || sum == 1)
-        {
-
-            // Comput sum of last
-            // digits and carry
-            //Because string.charAt(i) returns char. But puz is int[].
-            //So string.charAt(i) - '0'converts it to an integer.
-
-            sum += ((i >= 0)? a.charAt(i) - '0': 0) + ((j >= 0)? b.charAt(j) - '0': 0);
-            //sum += ;
-
-            // If current digit sum is
-            // 1 or 3, add 1 to result
-            // use (char)(sum % 2 + '0') 跟 sum % 2 速度差很多
-            result = (char)(sum % 2 + '0') + result;
-
-            // Compute carry
-            sum = sum/2;
-
-            // Move to next digits
-            i--; j--;
+            sum +=  aNum + bNum;
+            result.append(sum%2);
+            carry = sum/2;
+            aIdx--; //!!!
+            bIdx--;
+        }
+        if (carry > 0) { //!!!
+            result.append(carry);
         }
 
-        return result;
+        return result.reverse().toString();
+
     }
 
     public String addBinary2(String a, String b) {
-        StringBuilder sb = new StringBuilder();
-        int i = a.length() - 1, j = b.length() -1, carry = 0;
+        StringBuilder sb = new StringBuilder(); //Google immutability string vs stringbuilder if you don't know why we use this instead of regular string
+
+        //two pointers starting from the back, just think of adding two regular ints from you add from back
+        int i = a.length() - 1;
+        int j = b.length() -1;
+        int carry = 0;
+
         while (i >= 0 || j >= 0) {
-            int sum = carry;
-            if (j >= 0) sum += b.charAt(j--) - '0';
+            int sum = carry; //if there is a carry from the last addition, add it to carry
+
             if (i >= 0) sum += a.charAt(i--) - '0';
-            sb.append(sum % 2);
-            carry = sum / 2;
+            if (j >= 0) sum += b.charAt(j--) - '0';
+
+            sb.append(sum % 2); //if sum==2 or sum==0 append 0 cause 1+1=0 in this case as this is base 2 (just like 1+9 is 0 if adding ints in columns)
+            carry = sum / 2; //if sum==2 we have a carry, else no carry 1/2 rounds down to 0 in integer arithematic
         }
-        if (carry != 0) sb.append(carry);
-        return sb.reverse().toString();
+
+        if (carry != 0) {
+            sb.append(carry); //leftover carry, add it
+        }
+        return sb.reverse().toString(); // because we write to sb from begin, so it need reverse
     }
 
     public static void main(String[] args) {

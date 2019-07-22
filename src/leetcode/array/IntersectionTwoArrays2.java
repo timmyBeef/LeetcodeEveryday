@@ -4,6 +4,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 
+/*
+https://leetcode.com/problems/intersection-of-two-arrays-ii/
+
+    use map to store the first one, value and counts
+
+    to compare, if they are matched, add to result,
+    update map count-1
+
+    when 0, remove it from map, remove by map's key and value
+    so the result wont repeat
+ */
 public class IntersectionTwoArrays2 {
 
     public int[] intersect(int[] nums1, int[] nums2) {

@@ -3,11 +3,20 @@ package leetcode;
 import java.util.HashMap;
 import java.util.Map;
 
-// https://leetcode.com/problems/two-sum/solution/
-//用一個 map 把經過的值存起來, 檢查 (target - 下個值), 是不是存在 map 中了
-// ,一一比對, 存在代表得到答案了, 回傳 index
-
 /*
+https://leetcode.com/problems/two-sum/solution/
+
+we want to find two number's indexs
+
+use a map to store every (value, idx),
+check (target - now value) is it in map,
+if exists: get (now value's index and the map index)
+
+
+用一個 map 把經過的值存起來, 檢查 (target - 下個值), 是不是存在 map 中了
+,一一比對, 存在代表得到答案了, 回傳 index
+
+
 Time complexity : O(n). We traverse the list containing nn elements only once.
 Each look up in the table costs only O(1) time.
 
@@ -26,7 +35,7 @@ class TwoSum {
             }
             map.put(x, i);
         }
-        throw new IllegalArgumentException("No two sum solution");
+        return new int[]{};
     }
 
     public static void main(String args[]) {

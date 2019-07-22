@@ -1,41 +1,10 @@
-package leetcode.parenthesis;
+package leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /*
 https://leetcode.com/problems/remove-invalid-parentheses/
-
-step 1: outer loop: use stack++ --, the if rightP >  leftP, start to do the process
-
-
-We all know how to check a string of parentheses is valid using a stack.
-Or even simpler use a counter.
-
-The counter will increase when it is ‘(‘ and decrease when it is ‘)’.
-Whenever the counter is negative, we have more ‘)’ than ‘(‘ in the prefix.
-
-step 2: inner loop: jStart = j prevents duplicates, remove a ')' to make prefix valid
-        We then call the function recursively to solve the rest of the string
-        the last removal position.
-        If we do not have this position, we will generate duplicate by removing two ‘)’
-
-To make the prefix valid, we need to remove a ‘)’. The problem is: which one? The answer is any one in the prefix. However, if we remove any one, we will generate duplicate results, for example: s = ()), we can remove s[1] or s[2] but the result is the same (). Thus, we restrict ourself to remove the first ) in a series of concecutive )s.
-
-After the removal, the prefix is then valid. We then call the function recursively
-to solve the rest of the string.
-However, we need to keep another information: the last removal position.
-If we do not have this position, we will generate duplicate by removing two ‘)’
-in two steps only with a different order.
-For this, we keep tracking the last removal position and only remove ‘)’ after that.
-
-step3: reverse check again(WE HAVE MORE LEFT bracket)
-
-Now one may ask. What about ‘(‘? What if s = ‘(()(()’ in which we need remove ‘(‘?
-The answer is: do the same from right to left.
-However a cleverer idea is: reverse the string and reuse the code!
-Here is the final implement in Java.
-
 
 以 String input1 = "()())()"; 為例
 
@@ -66,7 +35,6 @@ jStart = j prevents duplicates
 why use return
 return; // Stop here. The recursive calls handle the rest of the string.
 
-IF WE HAVE MORE LEFT bracket
 Now one may ask. What about ‘(‘? What if s = ‘(()(()’ in which we need remove ‘(‘?
 The answer is: do the same from right to left.
 However a cleverer idea is: reverse the string and reuse the code!
@@ -84,16 +52,7 @@ However a cleverer idea is: reverse the string and reuse the code!
 所以總的思路就是先對字符串進行處理使得其不再含有非法右括號，然後將其翻轉以後再檢查是否含有非法的左括號．
 最後左右括號都檢查完之後都合法就是我們要的答案了．
 
-TIME: Accurately O(nm)
- where m is the total "number of recursive calls"
- or "nodes in the search tree".
- Then you need to relate m to n in the worst case.
-
 O(N^2)
-
-Space Complexity : The space complexity remains the same i.e.
-O(N) as previous solution.
-We have to go to a maximum recursion depth of N before hitting
 
  */
 
@@ -110,30 +69,67 @@ public class RemoveInvalidParentheses {
         int numOpenParen = 0, numClosedParen = 0;
 
         for (int i = iStart; i < s.length(); i++) {
-            if (s.charAt(i) == openParen) numOpenParen++;
+            if (s.charAt(i) == openParen) numOpenParen++;   //!!!
             if (s.charAt(i) == closedParen) numClosedParen++;
 
             if (numClosedParen > numOpenParen) { // We have an extra closed paren we need to remove
                 for (int j = jStart; j <= i; j++) { // Try removing one at each position, skipping duplicates
 
+                    // !! s.charAt(j) == closedParen  s.charAt(j - 1) != closedParen   not () correct
                     if (s.charAt(j) == closedParen && (j == jStart || s.charAt(j - 1) != closedParen)) {
                         // Recursion: iStart = i since we now have valid # closed parenthesis thru i.
                         // jStart = j prevents duplicates
                         // j == jStart , it means the first one is ')', it's already illegle, so no need to check j-1
                         String newStr = s.substring(0, j) + s.substring(j + 1, s.length());
-                        removeHelper(newStr, output, i, j, openParen, closedParen);
+                        removeHelper(newStr, output, i, j, openParen, closedParen); //!!
                     }
                 }
-                return; //stop here!!!// Stop here. The recursive calls handle the rest of the string.
+                return; // Stop here. The recursive calls handle the rest of the string.
             }
-        } //end i //!!!!
+        }
         // No invalid closed parenthesis detected. Now check opposite direction,
         // or reverse back to original direction.
-        String reversed = new StringBuilder(s).reverse().toString();//!!
+        String reversed = new StringBuilder(s).reverse().toString(); //!!
         if (openParen == '(')
-            removeHelper(reversed, output, 0, 0, ')', '(');
+            removeHelper(reversed, output, 0, 0, ')', '('); //!!!
         else
-            output.add(reversed);//再轉回來
+            output.add(reversed);
+    }
+
+
+    public List<String> removeInvalidParentheses2(String s) {
+        List<String> ans = new ArrayList<>();
+        removehelper2(s, ans, 0, 0, '(', ')');
+        return ans;
+    }
+
+    public void removehelper2(String s, List<String> ans, int startI, int startJ, char openParen, char closedParen) {
+        int numOpenParen = 0, numClosedParen = 0;
+        for (int i = startI; i < s.length(); i++) {
+           char c = s.charAt(i);
+            if(c == openParen) numOpenParen++;
+            if(c == closedParen) numClosedParen++;
+
+            if(numClosedParen > numOpenParen) {
+                for(int j = startJ; j <= i ; j++) {
+                    if(s.charAt(j) == closedParen && (j == startJ || s.charAt(j-1) != closedParen)) {
+                        String newStr = s.substring(0, j) + s.substring(j+1, s.length());
+                        removehelper2(newStr, ans, i, j, openParen, closedParen);
+                    }
+                }
+                return; //stop here!!!
+
+            }
+
+
+        } //end i //!!!!
+
+        String reverseStr = new StringBuilder(s).reverse().toString(); //!!
+        if(openParen == '(') {
+            removehelper2(reverseStr, ans, 0, 0, ')', '('); //!!
+        } else {
+            ans.add(reverseStr); //再轉回來
+        }
     }
 
     public static void main(String args[]) {

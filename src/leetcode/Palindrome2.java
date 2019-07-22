@@ -1,31 +1,61 @@
 package leetcode;
 
 // https://leetcode.com/problems/valid-palindrome-ii/
-// use greedy
-//O(N) 最多跑 s 長度
-//O(1) 只有變數i j
+/*
+
+you may delete at most one character. to make it palindrome
+
+The string will only contain lowercase characters a-z.
+The maximum length of the string is 50000.
+
+ approach 1: Brute Force [Time Limit Exceeded]
+ delete every char to try, the test it, is it palindrome
+
+ approach 2: greedy
+
+ left = 0, right = len -1;
+
+ check one by one by equals, to move the position until error position(not equal)
+
+ // greedy
+ if( try to ignore left char to run    or
+     try to ignore right char to run ) {
+    return true;
+ }
+
+ return false;
+
+Time Complexity: O(N) where N is the length of the string.
+Each of two checks of whether some substring is a palindrome is O(N).
+
+Space Complexity: O(1) additional complexity. Only pointers were stored in memory.
+
+ */
+
 public class Palindrome2 {
     public boolean validPalindrome(String s) {
-        int i = 0, j = s.length() - 1;
-        while (i < j && s.charAt(i) == s.charAt(j)) {
-            i++; j--;
+        int left = 0;
+        int right = s.length() - 1;
+
+        while (left < right && s.charAt(left) == s.charAt(right)) {
+            left++;
+            right--;
         }
 
-        if (i >= j) return true;
+        //if (left >= right) return true;
 
         // 嘗試跳過一個字母, 左跳過 或 右邊跳過
-        if (isPalin(s, i + 1, j) || isPalin(s, i, j - 1)) {
-            return true;
-        }
-        return false;
+        return isPalin(s, left+1, right) || isPalin(s, left, right-1);
+
     }
 
-    private boolean isPalin(String s, int i, int j) {
-        while (i < j) {
-            if (s.charAt(i) != s.charAt(j)) {
+    private boolean isPalin(String s, int left, int right) {
+        while (left < right) {
+            if (s.charAt(left) != s.charAt(right)) {
                 return false;
             }
-            i++; j--;
+            left++;
+            right--;
         }
         return true;
     }

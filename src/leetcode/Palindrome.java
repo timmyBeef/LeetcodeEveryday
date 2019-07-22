@@ -1,21 +1,31 @@
 package leetcode;
 
+/*
+use two pointer, left = 0, right = len-1
+
+while(left < right ) {
+    while(left < right && not letter or digits) , pass these char
+
+    compare char with lower case
+}
+ */
 public class Palindrome {
 
-    public boolean isPalindrome(String text) {
-        int i = 0;
-        int j = text.length() - 1;
+    public boolean isPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
 
-        while (i < j) {
+        while (left < right) {
 
-            while (i < j && !Character.isLetterOrDigit(text.charAt(i))) i++;
-            while (i < j && !Character.isLetterOrDigit(text.charAt(j))) j--;
-            if (Character.toLowerCase(text.charAt(i))
-                    != Character.toLowerCase(text.charAt(j))) {
+            while (left < right && !Character.isLetterOrDigit(s.charAt(left))) left++;
+            while (left < right && !Character.isLetterOrDigit(s.charAt(right))) right--;
+
+            if (Character.toLowerCase(s.charAt(left))
+                    != Character.toLowerCase(s.charAt(right))) {
                 return false;
             }
-            i++;
-            j--;
+            left++;
+            right--;
 
         }
         return true;

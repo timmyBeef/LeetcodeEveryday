@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.caculate;
 
 
 /*
@@ -37,6 +37,22 @@ The integer division should truncate toward zero.
 
     O(logN) divisor * 2^shifts to subtract the dividend every time, n is the original substraction time
     O(1)
+
+「五的四次方」讀作
+five to the power of four = five to the fourth power = five to the fourth
+
+「七的五次方」讀作
+seven to the power of five = seven to the fifth power = seven to the fifth
+
+「二次方」又稱作「平方」，英文是 square。「五的平方」我們就會說 five squared。
+「三次方」又稱作「立方」，英文是 cube。「五的立方」我們就會說 five cubed。
+
+coner case: because int range: 2147483647 ~ -2147483648
+so     int dividend = -2147483648;
+       int divisor = -1;
+       result is 2147483648, will overflow,
+       but if divisor = 1, result is -2147483648, it's ok, no need to check the mix_value condition
+
  */
 public class DivideTwoIntegers {
 
@@ -53,6 +69,9 @@ public class DivideTwoIntegers {
             }
         }
         if (isNegative == true) res = -res;
+
+        //int dividend = -2147483648; //coner case: because int range: 2147483647 ~ -2147483648
+        //int divisor = -1;
         if (res > Integer.MAX_VALUE) return Integer.MAX_VALUE;
         return (int)res;
     }
@@ -60,29 +79,29 @@ public class DivideTwoIntegers {
 
     public static void main(String[] args){
 
-        int dividend = -2147483648;
+        int dividend = -2147483648; //coner case: because int range: 2147483647 ~ -2147483648
         int divisor = -1;
 
         System.out.println(new DivideTwoIntegers().divide(dividend, divisor));
-//        int i = 1;
-//        boolean flag = dividend < 0 ^ divisor < 0;
-//        System.out.println("變數值...:"+ flag);
-//        System.out.println(" i = " + i);
-//
-//        System.out.println("位移運算...");
-//        System.out.println(" i << 1 = " + (i << 1));
-//        System.out.println(" i << 2 = " + (i << 2));
-//        System.out.println(" i << 3 = " + (i << 3));
-//
-//        i = 5;
-//
-//        System.out.println("變數值...");
-//        System.out.println(" i = " + i);
-//
-//        System.out.println("位移運算...");
-//        System.out.println(" i << 1 = " + (i << 1));
-//        System.out.println(" i << 2 = " + (i << 2));
-//        System.out.println(" i << 3 = " + (i << 3));
+        int i = 1;
+        boolean flag = dividend < 0 ^ divisor < 0;
+        System.out.println("變數值...:"+ flag);
+        System.out.println(" i = " + i);
+
+        System.out.println("位移運算...");
+        System.out.println(" i << 1 = " + (i << 1)); //2
+        System.out.println(" i << 2 = " + (i << 2)); //4
+        System.out.println(" i << 3 = " + (i << 3)); //8
+
+        i = 5;
+
+        System.out.println("變數值...");
+        System.out.println(" i = " + i);
+
+        System.out.println("位移運算...");
+        System.out.println(" i << 1 = " + (i << 1)); //5*2 = 10
+        System.out.println(" i << 2 = " + (i << 2)); //5*4 = 20
+        System.out.println(" i << 3 = " + (i << 3)); //5*8 = 40
 
     }
 }

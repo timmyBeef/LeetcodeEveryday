@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.string;
 
 // https://leetcode.com/problems/valid-palindrome-ii/
 /*

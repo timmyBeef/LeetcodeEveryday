@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.list;
 
 
 //https://leetcode.com/problems/merge-two-sorted-lists/

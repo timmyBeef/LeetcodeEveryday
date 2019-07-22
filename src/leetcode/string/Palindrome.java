@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.string;
 
 /*
 use two pointer, left = 0, right = len-1

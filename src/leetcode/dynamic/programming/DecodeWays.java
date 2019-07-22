@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.dynamic.programming;
 
 // https://leetcode.com/problems/decode-ways/
 

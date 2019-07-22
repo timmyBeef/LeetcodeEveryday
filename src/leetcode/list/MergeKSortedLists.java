@@ -1,6 +1,4 @@
-package leetcode;
-
-import java.sql.Time;
+package leetcode.list;
 
 public class MergeKSortedLists {
 

@@ -1,13 +1,12 @@
-package leetcode;
+package leetcode.array;
 
 import java.util.HashMap;
-import java.util.Map;
+// https://leetcode.com/problems/subarray-sum-equals-k/
 
+// 解題概念: presum + twosum 的解法
+// presum 就是 0~i-1 的加總, 我們計算出每個位置的 presum 記錄起來
 public class SubarraySumEqualsK {
-    // https://leetcode.com/problems/subarray-sum-equals-k/
 
-    // 解題概念: presum + twosum 的解法
-    // presum 就是 0~i-1 的加總, 我們計算出每個位置的 presum 記錄起來
 
     public int subarraySum(int[] nums, int k) {
         // Edge cases

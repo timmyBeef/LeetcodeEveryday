@@ -1,4 +1,4 @@
-package leetcode.slidingwindows;
+package leetcode.sliding.windows;
 
 import java.util.*;
 

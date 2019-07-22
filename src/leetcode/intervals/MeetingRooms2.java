@@ -9,6 +9,16 @@ import java.util.Arrays;
     explain:
     https://www.jianshu.com/p/ab729e7ddac9
 
+
+    the same: sort first(start end)
+    the same solution, end > start
+    to find how many rooms we need,
+
+    when end > start, we need one more room
+    else when another room's start > end, it means we could get this room,
+    so move the endpoint to next end time
+
+
     Time Complexity: O(NlogN) because all we are doing is sorting the two arrays
     for start timings and end timings individually and each of them would contain N
     elements considering there are N intervals.

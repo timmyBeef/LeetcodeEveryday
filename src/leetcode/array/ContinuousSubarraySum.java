@@ -1,16 +1,24 @@
-package leetcode;
+package leetcode.array;
 
 import java.util.HashMap;
 import java.util.Map;
 
 
 /*
+https://leetcode.com/problems/continuous-subarray-sum/
+
+kep point : caculate the presum
+then caculate it's mod by k, get remainder and record in hashmap
+if in the later the another remainder hit the hashmap,
+it means there is a sum has the mutile of k,
+and check the index, (now index - pre index at the map we get exists value) > 1, means continuous
+
 一樣先計算 presum
 
 map.put(0, -1);
 
 跑迴圈
-更新 sum = sum%k  // 取得 % 後的 key
+更新 sum = sum%k  // 取得 % 後的 key (remainder)
 如果之後遇到 map.containsKey(sum) // 如果之後又遇到, 代表你和上一個發生 這個% 後的 key, 相差了 k倍 !
 if (i - map.get(sum) > 1) // 所以看一下 index 和上次發生的 index 是不是 比 1 大, 代表中間有隔一個數, 所以是連續的
 return true;
@@ -27,7 +35,7 @@ Now, assume that the given sum value at the i-th
   We can observe that  rem(rem+n∗k), which is the same value as stored corresponding
   to the i-th index..
 
-  Time complexity : O(n). Only one traversal of the array numsnums is done.
+  Time complexity : O(n). Only one traversal of the array nums is done.
 
   Space complexity : O(min(n,k)). The HashMap can contain upto
                      min(n,k) different pairings.
@@ -50,33 +58,10 @@ public class ContinuousSubarraySum {
         return false;
     }
 
-    public boolean checkSubarraySum2(int[] nums, int k) {
-        int sum = 0;
-        Map<Integer, Integer> map = new HashMap<>();
-        map.put(0,-1);
-
-        for(int i=0; i < nums.length;i++) {
-            sum += nums[i];
-            if(k!=0) {
-                sum = sum % k;
-            }
-            if(map.containsKey(sum)) {
-                int mapIndex = map.get(sum);
-                if(i - mapIndex > 1) {
-                    return true;
-                }
-            } else {
-                map.put(sum, i);
-            }
-        }
-
-        return false;
-    }
-
     public static void main(String[] args) {
 
         int[] nums = {23, 2, 4, 6, 7};
         int k = 6;
-        System.out.println(new ContinuousSubarraySum().checkSubarraySum2(nums, k));
+        System.out.println(new ContinuousSubarraySum().checkSubarraySum(nums, k));
     }
 }

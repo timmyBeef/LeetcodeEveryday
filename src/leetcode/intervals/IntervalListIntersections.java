@@ -8,7 +8,7 @@ step1: two pointer from zero
 
 intersection: A's end > B's start, so get the min end, and the max start
 
-// 要移掉 A 和 B 之間較小的 end, 因為只能和之前的做 intersect, 如此地去移動 porinter
+step2: // 要移掉 A 和 B 之間較小的 end, 因為只能和之前的做 intersect, 如此地去移動 porinter
 If A[0] has the smallest endpoint, it can only intersect B[0].
 After, we can discard A[0] since it cannot intersect anything else.
 
@@ -22,6 +22,7 @@ Space Complexity: O(M+N), the maximum size of the answer.
  */
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class IntervalListIntersections {
@@ -46,5 +47,16 @@ public class IntervalListIntersections {
         }
 
         return ans.toArray(new int[ans.size()][]);
+    }
+
+    public static void main(String args[]) {
+/*      Input: A = [[0,2],[5,10],[13,23],[24,25]], B = [[1,5],[8,12],[15,24],[25,26]]
+        Output: [[1,2],[5,5],[8,10],[15,23],[24,24],[25,25]]
+*/
+        int a[][] = {{0,2},{5,10},{13,23},{24,25}};
+        int b[][] = {{1,5},{8,12},{15,24},{25,26}};
+        int[][] rs = new IntervalListIntersections().intervalIntersection(a, b);
+        Arrays.stream(rs).forEach(r -> System.out.print(Arrays.toString(r)));
+
     }
 }

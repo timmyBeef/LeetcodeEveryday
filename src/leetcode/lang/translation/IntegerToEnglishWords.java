@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.lang.translation;
 
 //https://leetcode.com/problems/integer-to-english-words/
 
@@ -6,7 +6,19 @@ package leetcode;
 
 // so 1231234567 => 1.231.234.567 => 1 billion 231 million 234 thousand 567
 
+
 // then use helper to convert the remain three num digits
+// 0
+// <20
+// <100
+// else
+
+/*
+Time complexity : O(N). Intuitively the output is proportional to
+the number N of digits in the input.
+
+Space complexity : O(1) since the output is just a string.
+ */
 public class IntegerToEnglishWords {
 
     public static final String LESS_THAN_20[] = {
@@ -26,7 +38,7 @@ public class IntegerToEnglishWords {
         String words = "";
         int i = 0;
         while (num > 0) {
-            if (num % 1000 != 0) {
+            if (num % 1000 != 0) { // 若不做 可能會多一個空的 "Thousand", "Million", "Billion"
                 words = helper(num % 1000) + THOUSANDS[i] + " " + words;
             }
             i++;

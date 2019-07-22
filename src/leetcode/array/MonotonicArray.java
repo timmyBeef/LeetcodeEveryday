@@ -1,11 +1,12 @@
-package leetcode;
+package leetcode.array;
 
 
 // https://leetcode.com/problems/monotonic-array/
-public class MonotonicArray {
 
-    //O(N) where N is the length of A.
-    //O(1)
+//O(N) where N is the length of A.
+//O(1)
+
+public class MonotonicArray {
 
     // two pass
     public boolean isMonotonic(int[] A) {

@@ -1,7 +1,6 @@
-package leetcode;
+package leetcode.lang.translation;
 
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 

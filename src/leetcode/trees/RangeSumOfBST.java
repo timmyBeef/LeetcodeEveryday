@@ -5,9 +5,9 @@ import java.util.*;
 /*
 https://leetcode.com/problems/range-sum-of-bst/
 
-Time Complexity: O(N)O(N), where NN is the number of nodes in the tree.
+Time Complexity: O(N), where N is the number of nodes in the tree.
 
-Space Complexity: O(H)O(H), where HH is the height of the tree.
+Space Complexity: O(H), where H is the height of the tree.
 
 */
 public class RangeSumOfBST {
@@ -22,7 +22,7 @@ public class RangeSumOfBST {
             if (node != null) {
                 if (L <= node.val && node.val <= R)
                     ans += node.val;
-                if (L < node.val)
+                if (L < node.val) //???
                     stack.push(node.left);
                 if (node.val < R)
                     stack.push(node.right);
@@ -65,6 +65,7 @@ public class RangeSumOfBST {
         n2.right = n5;
 
         System.out.println(String.valueOf(new RangeSumOfBST().rangeSumBST2(n1, 0, 3)));
+        System.out.println(String.valueOf(new RangeSumOfBST().rangeSumBST(n1, 0, 3)));
 
     }
 }

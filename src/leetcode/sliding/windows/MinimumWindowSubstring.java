@@ -6,14 +6,15 @@ import java.util.*;
 /*
      sliding windows
 
-     step 1  build map: the string which you want to find
+     step 1  build map: the string which you want to find, Map<Character, Integer> , Map<find char, this char's count>
+
              int counter = map.size();// length 0f the string which you want to find
              left = 0, right =0
 
      step 2: right point "keep moving" to the match condition,
              if match map key, do counter--
 
-     step 3: when counter == 0, it means match condition(all char hit the map),
+     step 3: when counter == 0, it means match condition (all char hit the map),
              so do the left point++,
              to find next window which match condition.
 
@@ -33,23 +34,29 @@ import java.util.*;
       step 4  return result (return s.substring(head, head + len))
 
 
-      time:  O(S+T) , S search string length(traversal data), T pattern string lenfth(build the map time)
-      space: O(S+T)
+      time:  O(S+T) ,
+      S search string length(traversal data),
+      T pattern string length(build the map time)
+
+      space: O(T)
  */
 
 public class MinimumWindowSubstring {
     public String minWindow(String s, String t) {
 
-        if (t.length() > s.length()) return "";
+        if (t.length() > s.length()) {
+            return "";
+        }
         Map<Character, Integer> map = new HashMap<>();
         for (char c : t.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
         int counter = map.size();
 
-        int begin = 0, end = 0;
-        int head = 0;
-        int len = Integer.MAX_VALUE;
+        int begin = 0;
+        int end = 0;
+        int head = 0; //record the result's start
+        int len = Integer.MAX_VALUE; //record the result's len
 
         while (end < s.length()) { //!
 
@@ -57,11 +64,11 @@ public class MinimumWindowSubstring {
             char c = s.charAt(end);
             if (map.containsKey(c)) {
                 map.put(c, map.get(c) - 1); //!!
-                if (map.get(c) == 0) counter--; //!!
+                if (map.get(c) == 0) counter--; //!!!!
             }
             end++;
 
-            while (counter == 0) { // 代表 match 完了
+            while (counter == 0) { //condition 代表 match 完了
 
                 // move letf
                 // 所以左邊要開始繼續右移, 右移的過程中, 如果是原本符合的字, 要把 map 對應的 count +回去
@@ -72,7 +79,8 @@ public class MinimumWindowSubstring {
                         counter++;
                     }
                 }
-                if (end - begin < len) {
+                // the template differnet point
+                if (end - begin < len) { //find the minimal
                     len = end - begin;
                     head = begin;
                 }

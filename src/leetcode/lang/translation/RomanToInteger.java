@@ -32,7 +32,8 @@ M - 1000
 
  C < D , C < M
 
-
+O(N)
+O(1)
 */
     public int romanToInt(String s) {
 
@@ -50,7 +51,7 @@ M - 1000
                 result += cur;
             }
         }
-        result += getVal(s.charAt(s.length()-1));
+        result += getVal(s.charAt(s.length()-1)); // add last char
 
         return result;
     }

@@ -1,23 +1,34 @@
 package leetcode.lang.translation;
 
 //https://leetcode.com/problems/integer-to-english-words/
-
-// 3 digits, one comma, to seperate "Thousand", "Million", "Billion"
-
-// so 1231234567 => 1.231.234.567 => 1 billion 231 million 234 thousand 567
-
-
-// then use helper to convert the remain three num digits
-// 0
-// <20
-// <100
-// else
-
 /*
+3 digits, one comma, to seperate "Thousand", "Million", "Billion"
+
+so 1231234567 => 1.231.234.567 => 1 billion 231 million 234 thousand 567
+
+
+then use helper to convert the remain three num digits
+0
+<20
+<100
+else
+
+
+main:
+if (num % 1000 != 0){
+    words = helper(num % 1000) + THOUSANDS[i] + " " + words;
+}
+i++;
+num /= 1000;
+
+return words.trim();
+
 Time complexity : O(N). Intuitively the output is proportional to
 the number N of digits in the input.
 
 Space complexity : O(1) since the output is just a string.
+
+
  */
 public class IntegerToEnglishWords {
 
@@ -48,7 +59,7 @@ public class IntegerToEnglishWords {
         return words.trim();
     }
 
-
+    // gen xx hundred ...
     public String helper(int num) {
         if (num == 0) {
             return "";

@@ -1,5 +1,6 @@
 package leetcode.sliding.windows;
 
+import java.sql.Time;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,9 +47,25 @@ public class LengthOfLongestSubstring {
 
     step2 沒有重複時, 持續移動j, 並記錄j的字是否出現
     step3 重複時, 開始移動i的位置, 直到沒有重複的位置
-    step4 持續更新長度 (j-i +1)
+    step4 持續更新長度 Math.max(j - i + 1, maxLen)
 
     回傳 maxLen
+
+    ex:
+    String s = "pwwkew";
+            j =0, ex[p] = true  maxLen=1
+            j= 1, ex[w] = true  maxLen=2
+            j= 2, i = 0, j exists w, ex[p] = false; i++;
+                  i = 1, j exists w, ex[w] = false; i++
+                  i = 2, j not exists w
+                  ex[w] = true;  maxLen=2
+            j= 3, ex[k] = true;  maxLen=2
+            j= 4, ex[e] = true;  maxLen=3
+            j= 5  i = 2, j exists w ex[w] = false; i++;
+                  i = 3, j not exists w
+                  ex[w] = true;  maxLen=3
+
+
 
     Time complexity : O(n). Index j will iterate n times.
     Space complexity (Table): O(m). m is the size of the charset.
@@ -68,6 +85,7 @@ public class LengthOfLongestSubstring {
     }
 
     public static void main(String[] args) {
+
         String s = "pwwkew";
         System.out.println(String.valueOf(new LengthOfLongestSubstring().simple(s)));
 

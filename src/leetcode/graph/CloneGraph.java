@@ -11,13 +11,26 @@ Given a reference of a node in a connected undirected graph,
 return a deep copy (clone) of the graph. Each node in the graph
 contains a val (int) and a list (List[Node]) of its neighbors.
 
-USE DFS
+USE DFS,
+use HashMap<Integer, Node> to record has cloned node
+
+if(map.containsKey(node value)) {
+    return map.get(node value);
+}
+Node newNode = ...
+map.put()
+
+for(Node neighbor : node.neighbors) {
+    newNode.neighbors.add(clone(neighbor))
+}
+return newNode
  */
 
 public class CloneGraph {
     public HashMap<Integer, Node> map = new HashMap<>();
 
     public Node cloneGraph(Node node) {
+
         return clone(node);
     }
 

@@ -25,15 +25,15 @@ Input:
 
 Output: 3
 
-*/
 
-// USE DFS
-// https://leetcode.com/problems/number-of-islands/solution/
-/*
+ USE DFS (why, use to visit node, and mark visited,
+ so in the later we will not count it as an island again)
+ https://leetcode.com/problems/number-of-islands/solution/
+
      step1: define the variable n: graph's height, m: width, count: the count of island
 
      step2: traveral all node, if hit 1, it means an island's start, count++
-     then dfs the adjent node, if visited mark '0'
+     then dfs the adjent node, if visited mark '0', use dfs to mark visited node
 
      condition limit: out of range && not island
      if (i < 0 || j < 0 || i >= n || j >= m || grid[i][j] != '1') return;
@@ -41,20 +41,20 @@ Output: 3
  */
 public class NumberOfIslands {
 
-    private int n;
-    private int m;
+    private int n; // graph's height
+    private int m; // width
     public int numIslands(char[][] grid) {
         n = grid.length;
         if(n == 0) return 0;
         m = grid[0].length;
 
-        int count = 0;
+        int count = 0; // the count of island
 
         for(int i=0; i < n; i++) {
             for(int j= 0; j <m; j++) {
-                if(grid[i][j] == '1') {
-                    dfs(grid, i, j);
-                    count++;
+                if(grid[i][j] == '1') { // an island's start
+                    dfs(grid, i, j); //run dfs, run through an island
+                    count++; // count of island++
                 }
             }
         }
@@ -63,8 +63,8 @@ public class NumberOfIslands {
 
     private void dfs(char[][] grid, int i, int j) {
         if(i < 0 || j < 0 || i >= n  || j >= m || grid[i][j] != '1') return;
-        grid[i][j] = '0';
-        dfs(grid, i+1, j);
+        grid[i][j] = '0'; // mark visited
+        dfs(grid, i+1, j); // toward different directions...
         dfs(grid, i-1, j);
         dfs(grid, i, j+1);
         dfs(grid, i, j-1);

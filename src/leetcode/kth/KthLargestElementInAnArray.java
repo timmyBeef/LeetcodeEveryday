@@ -1,65 +1,27 @@
 package leetcode.kth;
 
-import java.util.*;
+
 // https://leetcode.com/problems/kth-largest-element-in-an-array/
 
 /*
- Kth largest 用 quick select (看圖解)
+ Kth 用 quick select (看圖解)
 
- find Kth largest so find n - k smallest
-
- step 1: // Take A[end] as the pivot,(move pivot to end)
+ step 1: // Take A[end] as the pivot,
  step 2: // Put numbers < pivot to pivot's left
-
-            ** swap is a way to move big num to right (like question moveZeros )
-
-            while(j <= n)
-
-
-
-            4 2 1 5 6 3     4 > 3(pivot) so j++
-            i          p
-            j
-
-            4 2 1 5 6 3     2 < 3(pivot) so swap(i, j), i++, j++
-            i          p
-              j
-
-            2 4 1 5 6 3     1 < 3(pivot) so swap(i, j), i++, j++
-              i       p
-                j
-
-            2 1 4 5 6 3     5 > 3(pivot) so j++
-                i     p
-                  j
-
-            2 1 4 5 6 3     6 > 3(pivot) so j++
-                i     p
-                    j
-
-            2 1 4 5 6 3     finally, swap(pivot, i)
-                i     p
-                      j
-
  step 3: // Finally, swap A[end] with A[left]
 
-            2 1 3 5 6 4     Put numbers < pivot to pivot's left  => successful
-                L     R
-
-
  step 4: if (left == k) // Found kth smallest number
-            return nums[left];
 
          else if (left < k)// Check right part
-            return QuickSelectKthSmallest(nums, left + 1, end, k);
 
          else // Check left part
-            return QuickSelectKthSmallest(nums, start, left - 1, k);
-
-Time complexity : O(N) in the average case, O(N^2) in the worst case.
-Space complexity : O(1).
-
+The advantage of this solution is it is very efficient.
+The disadvatage of this solution are it is neither an online solution nor a stable one.
+And the K elements closest are not sorted in ascending order.
 */
+
+import java.util.PriorityQueue;
+import java.util.Random;
 
 public class KthLargestElementInAnArray {
 
@@ -134,6 +96,10 @@ public class KthLargestElementInAnArray {
     }
 
     /*
+        The advantage of this solution is it can deal with real-time(online)
+        stream data. It does not have to know the size of the data previously.
+        The disadvatage of this solution is it is not the most efficient solution.
+
         The idea is to init a heap "the smallest element first",
         and add all elements from the array into this heap one by one keeping
         the size of the heap always less or equal to k. That would results
@@ -143,6 +109,7 @@ public class KthLargestElementInAnArray {
 
         Time complexity : O(Nlogk).
         Space complexity : O(k) to store the heap elements.
+
      */
     public int findKthLargestByHeap(int[] nums, int k) {
         // init heap 'the smallest element first'
@@ -150,7 +117,7 @@ public class KthLargestElementInAnArray {
                 new PriorityQueue<Integer>((n1, n2) -> n1 - n2);
 
         // keep k largest elements in the heap
-        for (int n: nums) {
+        for (int n : nums) {
             heap.add(n);
             if (heap.size() > k)
                 heap.poll();

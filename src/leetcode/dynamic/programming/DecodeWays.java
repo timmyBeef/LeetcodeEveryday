@@ -15,9 +15,17 @@ combination and save the results along the way.
 
 In the end, dp[n] will be the end result.
 
-如果 長度2的字串, 1位或2位都可以解碼的範圍的話那 dp[2] = dp[1] + dp[0]否则dp[2]=dp[1]。
+如果 長度2的字串, 1位或2位都可以解碼的範圍的話那 dp[2] = dp[1] + dp[0] 否则 dp[2]=dp[1]。
 dp[i]=dp[i-1]+dp[i-2]，否则dp[i]=dp[i-1]。
 
+// https://www.jianshu.com/p/4c4314799662
+
+Time: O( n )
+Memoization prunes our recursion tree and we will do a linear amount of work
+to solve the problem.
+
+Space: O( n )
+We will need to store the answer to up to n subproblems that we will need to calculate
 
 */
 public class DecodeWays {
@@ -32,13 +40,13 @@ public class DecodeWays {
         for(int i = 2; i <= n; i++) {
 
             // 枚舉最後一個字母對應2位, 成立代表在 i-2 位置上可以有方法
-            int twoDigit = Integer.valueOf(s.substring(i-2, i));
+            int twoDigit = Integer.valueOf(s.substring(i-2, i)); //i=2, 0~2
             if(twoDigit >= 10 && twoDigit <= 26) {
                 dp[i] += dp[i-2];
             }
 
             // 枚舉最後一個字母對應1位, 成立代表在 i-1 位置上可以有方法
-            int oneDigit = Integer.valueOf(s.substring(i-1, i));
+            int oneDigit = Integer.valueOf(s.substring(i-1, i)); //i=2, 1~2
             if(oneDigit >= 1 && oneDigit <= 9) {//!!
                 dp[i] += dp[i-1];
             }

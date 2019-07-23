@@ -1,18 +1,21 @@
 package leetcode.string;
-
+// https://leetcode.com/problems/reverse-words-in-a-string/
+/*
+    append condition: left == 0 || s.charAt(left-1) == ' '
+ */
 public class ReverseWord {
     public String reverseWords(String s) {
         StringBuilder reversed = new StringBuilder();
 
-        int j = s.length();
-        for(int i = s.length()-1; i >= 0; i--) {
-            if(s.charAt(i) == ' ') {
-                j = i;
-            } else if (i == 0 || s.charAt(i-1) == ' ') {
+        int right = s.length();
+        for(int left = s.length()-1; left >= 0; left--) { // from right to run
+            if(s.charAt(left) == ' ') { // left == '' , it means a new word to do, so set new right
+                right = left;
+            } else if (left == 0 || s.charAt(left-1) == ' ') { //last positon || found a word could ouput
                 if(reversed.length() != 0) {
                     reversed.append(" ");
                 }
-                reversed.append(s.substring(i, j));
+                reversed.append(s.substring(left, right));
             }
         }
         return reversed.toString();

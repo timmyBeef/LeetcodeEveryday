@@ -61,7 +61,10 @@ public class DivideTwoIntegers {
         long Dividend = Math.abs((long)dividend); //!!!!
         long Divisor = Math.abs((long)divisor);  //!!!!
         long res = 0; //!!!!
-        while (Dividend >= Divisor) {
+
+        //[7,3]  why while (Dividend >= Divisor) 7>=3 : when 7-(3<<0=3) = 4, 還可以再減, 但又不用(3<<1=9) 去減 for end
+        // 又進入 while (Dividend >= Divisor) 4>=3  再減一次 7-(3<<0=3) = 1 完成（Dividend < Divisor）！
+        while (Dividend >= Divisor) { // no this: corner case: [7,-3] fail , no equal [1,1] fail
             long c = Divisor;
             for (int i = 0; (c << i) <= Dividend; ++i) {
                 Dividend -= (c << i);
@@ -82,13 +85,20 @@ public class DivideTwoIntegers {
         int dividend = -2147483648; //coner case: because int range: 2147483647 ~ -2147483648
         int divisor = -1;
 
-        System.out.println(new DivideTwoIntegers().divide(dividend, divisor));
+//        int d1 = 7;
+//        int d2 = -3;
+
+        int d1 = 1;
+        int d2 = 1;
+
+        System.out.println(new DivideTwoIntegers().divide(d1, d2));
         int i = 1;
         boolean flag = dividend < 0 ^ divisor < 0;
         System.out.println("變數值...:"+ flag);
         System.out.println(" i = " + i);
 
         System.out.println("位移運算...");
+        System.out.println(" i << 0 = " + (i << 0)); //1
         System.out.println(" i << 1 = " + (i << 1)); //2
         System.out.println(" i << 2 = " + (i << 2)); //4
         System.out.println(" i << 3 = " + (i << 3)); //8

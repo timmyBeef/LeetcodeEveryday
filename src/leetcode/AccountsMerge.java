@@ -159,7 +159,7 @@ public class AccountsMerge {
         // and the rest of the elements are emails in sorted order.
         for (List<String> component : ans.values()) {
             Collections.sort(component);
-            component.add(0, emailToName.get(component.get(0)));
+            component.add(0, emailToName.get(component.get(0))); //get emailToName's name
         }
         return new ArrayList(ans.values());
     }

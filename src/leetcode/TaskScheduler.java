@@ -2,9 +2,6 @@ package leetcode;
 
 // https://leetcode.com/problems/task-scheduler/
 
-
-
-
 /*
 因為 本題只想要知道最後的 intervals 總共多少, 所以其實本題是在算..."idles + number of tasks"
 
@@ -25,18 +22,18 @@ so..  idles = max(0, emptySlots - availableTasks)
 
 count of tasks with most frequency = 2
 
-A ? ? ? A ? ? ? A
-A B ? ? A B ? ? A B
+A ? ? ? A ? ? ? A   (n = 3 (? is empty slots))
+A B ? ? A B ? ? A B  => ? 變2
 所以其實可以視為
 X ? ? X ? ? X
-so n=3 => 2
+so n=3 => 變2
 
 so...
 emptySlots = partCount * (n - (count of tasks with most frequency - 1))
 
 availableTasks = tasks.length - count(A) * count of tasks with most frenquency
 
-partCount(間個數) = count(A) - 1
+partCount(間格數) = count(A) - 1
 emptySlots = partCount * (n - (count of tasks with most frequency - 1))
 availableTasks = tasks.length - count(A) * count of tasks with most frenquency
 idles = max(0, emptySlots - availableTasks)
@@ -58,34 +55,37 @@ Thus we have idles = max(0, emptySlots - availableTasks);
 
 */
 
-import java.util.Arrays;
-
 public class TaskScheduler {
     public int leastInterval(char[] tasks, int n) {
         int[] counter = new int[26];
         int maxTask = 0;
         int sameMaxTaskCount = 0;
+
         for (char task : tasks) {
             counter[task - 'A']++;
             if (maxTask == counter[task - 'A']) {
                 sameMaxTaskCount++;
+
+            // accumulate and update max, otherwise others have max, or maxTask will not update
+            // {'A', 'A', 'A', 'B', 'B'}, maxTask is still lower than counter['A'-'A']
+            //  so the result is maxTask = 3, sameMaxTaskCount = 1
             } else if (maxTask < counter[task - 'A']) {
                 maxTask = counter[task - 'A'];
                 sameMaxTaskCount = 1;
             }
         }
 
-
+        // A  gap  A  gap  A
         int gaps = maxTask - 1;
         int emptySlots = gaps * (n - (sameMaxTaskCount -1));
         int availableTasks = tasks.length - maxTask*sameMaxTaskCount;
         int idles = Math.max(0, emptySlots - availableTasks);
 
-        return tasks.length + idles;
+        return tasks.length + idles; // totol intervals
     }
 
     public static void main(String[] args) {
-        char[] tasks = {'A', 'A', 'A', 'B', 'B', 'B'};
+        char[] tasks = {'A', 'A', 'A', 'B', 'B'};
         int n = 2;
         System.out.println(new TaskScheduler().leastInterval(tasks, n));
 

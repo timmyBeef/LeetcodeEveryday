@@ -19,12 +19,9 @@ public class KClosestPointsToOrigin {
     // O(N)
     public int[][] kClosestByMaxHeap(int[][] points, int K) {
 
-        PriorityQueue<int[]> heap = new PriorityQueue<int[]>(new Comparator<int[]>() {
-            @Override
-            public int compare(int[] left, int[] right) { // 注意, 要右減左
-                return getDistance(right) - getDistance(left);
-            }
-        });
+        // 注意, 要右減左
+        PriorityQueue<int[]> heap =
+                new PriorityQueue<int[]>((right, left) -> getDistance(right) - getDistance(left));
 
         for (int[] point: points) {
             heap.add(point);
@@ -44,6 +41,9 @@ public class KClosestPointsToOrigin {
     private int getDistance(int [] point) {
         return point[0] * point[0] + point[1] * point[1];
     }
+
+    // test
+    // https://leetcode.com/problems/k-closest-points-to-origin/discuss/218691/O(N)-Java-using-Quick-Select(beats-100)
 
     // Theoretically, the average time complexity is O(N) ,
     // but just like quick sort, in the worst case,
@@ -85,34 +85,6 @@ public class KClosestPointsToOrigin {
         return p1[0] * p1[0] + p1[1] * p1[1] - p2[0] * p2[0] - p2[1] * p2[1];
     }
 
-    public int[][] kClo(int[][] points, int K) {
-        PriorityQueue<int[]> heap = new PriorityQueue<int[]>(new Comparator<int[]>() {
-            @Override
-            public int compare(int p1[], int p2[]) {
-                return getDist(p2) - getDist(p1);
-            }
-        });
-
-        for(int p[] : points) {
-            heap.add(p);
-            if(heap.size() > K) {
-                heap.poll();
-            }
-        }
-
-        int result[][] = new int[K][2];
-        for(int i = 0; i < K ;i++) {
-            result[i] = heap.poll();
-        }
-
-        return result;
-    }
-
-
-    private int getDist(int [] point) {
-        return point[0] * point[0] + point[1] * point[1];
-    }
-
     public static void main(String[] args) {
         // points[0] = {3,3}, points[1] = {5,-1}, points[2]= {-2,4}
         int points[][] = {{3,3},{5,-1},{-2,4}};
@@ -129,7 +101,7 @@ public class KClosestPointsToOrigin {
 
         System.out.println("=========max heap=========");
 
-        int rs2[][] = new KClosestPointsToOrigin().kClo(points, k);
+        int rs2[][] = new KClosestPointsToOrigin().kClosestByMaxHeap(points, k);
 
         for(int r[] : rs2) {
             System.out.println(Arrays.toString(r));

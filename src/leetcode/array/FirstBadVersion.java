@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.array;
 
 // https://leetcode.com/problems/first-bad-version/
 /*

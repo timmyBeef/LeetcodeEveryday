@@ -44,13 +44,16 @@ public class IntegerToEnglishWords {
     public static final String THOUSANDS[] = {"", "Thousand", "Million", "Billion"};
 
     public String numberToWords(int num) {
-        if (num == 0) return "Zero";
+        if (num == 0) return "Zero"; //! edge case
 
         String words = "";
         int i = 0;
         while (num > 0) {
-            if (num % 1000 != 0) { // 若不做 可能會多一個空的 "Thousand", "Million", "Billion"
-                words = helper(num % 1000) + THOUSANDS[i] + " " + words;
+
+            // !!! 若不做 可能會多一個空的 "Thousand", "Million", "Billion"
+            // ex: 123, loop1 => ok loop2 123/1000 = 0.123 = 0 so 不會多跑
+            if (num % 1000 != 0) {
+                words = helper(num % 1000) + THOUSANDS[i] + " " + words; //!!
             }
             i++;
             num /= 1000;
@@ -60,8 +63,9 @@ public class IntegerToEnglishWords {
     }
 
     // gen xx hundred ...
+    // hundred tail whitespace all hadle in helper
     public String helper(int num) {
-        if (num == 0) {
+        if (num == 0) { // !! fifty will come in again
             return "";
         }
 
@@ -76,7 +80,7 @@ public class IntegerToEnglishWords {
     }
 
     public static void main(String args[]) {
-        System.out.println(new IntegerToEnglishWords().numberToWords(1231234567));
+        System.out.println(new IntegerToEnglishWords().numberToWords(50868));
 
         System.out.println(new IntegerToEnglishWords().numberToWords(1231234567));
 

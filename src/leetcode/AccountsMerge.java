@@ -16,22 +16,23 @@ dsu.find(email) 找到老大
 
 
 Time Complexity: O(AlogA), where
-​
-A = ai和
-ai is the length of accounts[i]. If we used union-by-rank,
-this complexity improves to O(A \alpha(A)) \approx O(A)O(Aα(A))≈O(A), where \alphaα is the Inverse-Ackermann function.
-
+​A = sum of Ai
+Ai is the length of accounts[i].
 
 for (List<String> account: accounts) { // O(A)
-  union // O(logA) , union-by-rank => O(α(N)) => O(1)
+  union/find need  O(logA) , union-by-rank => O(α(N)) => O(1)
 }
+
+If we used union-by-rank,
+this complexity improves to O(Aα(A))≈O(A), where α is the Inverse-Ackermann function.
+
 
 Outside the scope of this article, it can be shown why
 dsu.union has O(α(N)) complexity, what the Inverse-Ackermann function is,
 and why O(α(N)) is approximately O(1).
 
 Space Complexity: O(A), the space used by our DSU structure.
-
+------------------------------------------------------------------------
 use dsu
         DSU dsu = new DSU();
         build

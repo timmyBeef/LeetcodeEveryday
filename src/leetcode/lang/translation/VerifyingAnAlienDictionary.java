@@ -34,7 +34,7 @@ public class VerifyingAnAlienDictionary {
         // 'C' - 'A' == 2
         // 建立字典(存著順序)
         for (int i = 0; i < 26; i++) {
-            map[order.charAt(i) - 'a'] = i;
+            map[order.charAt(i) - 'a'] = i; //lowercase
         } // construct mapping to the give order.
 
         for (int i = 0; i < words.length-1; i++) { // Verify the ajacent words order.

@@ -80,7 +80,7 @@ public class MinimumWindowSubstring {
                     }
                 }
                 // the template differnet point
-                if (end - begin < len) { //find the minimal
+                if (end - begin < len) { //find the minimal// !!
                     len = end - begin;
                     head = begin;
                 }

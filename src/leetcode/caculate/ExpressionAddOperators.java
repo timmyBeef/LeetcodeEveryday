@@ -158,10 +158,10 @@ public class ExpressionAddOperators {
         List<String> res = new ExpressionAddOperators().addOperators(num, target);
         res.stream().forEach(s -> System.out.println(s));
 
-        String num2 = "00";
-        int target2 = 0;
-
-        List<String> res2 = new ExpressionAddOperators().addOperators(num2, target2);
-        res2.stream().forEach(s -> System.out.println(s));
+//        String num2 = "00";
+//        int target2 = 0;
+//
+//        List<String> res2 = new ExpressionAddOperators().addOperators(num2, target2);
+//        res2.stream().forEach(s -> System.out.println(s));
     }
 }

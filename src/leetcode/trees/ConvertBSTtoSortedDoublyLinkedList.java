@@ -5,8 +5,8 @@ https://leetcode.com/problems/convert-binary-search-tree-to-sorted-doubly-linked
 
 keypoint: 做一個 dummy node 來 連接 頭尾
 
-step 1, 跑 dfs inorder
-step 2, use dummy to 連接 頭尾
+step 1, 跑 dfs inorder, 因為題目是inorder
+step 2, use dummy to 連接 頭尾                       prev move here
                                                   |prev  |
 |dummy|   <->   |->    -| node | <-> | node | <-> | node | <-  ---
 |prev |         |      \                                    |    |
@@ -33,9 +33,9 @@ public class ConvertBSTtoSortedDoublyLinkedList {
         if (root == null) return null;
         Node dummy = new Node(0, null, null);
         prev = dummy;
-        helper(root);
+        helper(root); //step1
         //connect head and tail
-        prev.right = dummy.right;
+        prev.right = dummy.right; //step2
         dummy.right.left = prev;
         return dummy.right;
     }
@@ -43,9 +43,9 @@ public class ConvertBSTtoSortedDoublyLinkedList {
     private void helper(Node cur) {
         if (cur == null) return;//!! 無回傳
         helper(cur.left);
-        prev.right = cur;
-        cur.left = prev;
-        prev = cur;
+        prev.right = cur; // doubly link
+        cur.left = prev; // doubly link
+        prev = cur; // move to next
         helper(cur.right); //!! 無回傳
     }
 }

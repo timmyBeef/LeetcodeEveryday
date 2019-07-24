@@ -31,7 +31,7 @@ public class Atoi {
     private static final int maxDiv10 = Integer.MAX_VALUE / 10;
 
     public int atoi(String str) {
-        int i = 0;
+        int i = 0; //from left
         int n = str.length();
 
         //all check i < n
@@ -48,7 +48,7 @@ public class Atoi {
 
         int num = 0;
         // check is digit
-        while (i < n && Character.isDigit(str.charAt(i))) {
+        while (i < n && Character.isDigit(str.charAt(i))) { // EX: 123, 1, 1*10+2, 12*10+3
 
             int digit = Character.getNumericValue(str.charAt(i));
 

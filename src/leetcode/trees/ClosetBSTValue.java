@@ -3,44 +3,51 @@ package leetcode.trees;
 
 // https://leetcode.com/problems/closest-binary-search-tree-value/
 
-// 遞迴就是要一值更新值, 最後得到結果
+
 
 /*
-Time Complexity: O(N). We visit every node once.
 
-Space Complexity: O(N), the size of our implicit call stack during our depth-first search.
+Input: root = [4,2,5,1,3], target = 3.714286
+
+    4
+   / \
+  2   5
+ / \
+1   3
+
+Output: 4
+
+use binary search
+
+closest 之前最近的結果
+
+val now node's val
+
+return closest;
+
+Time complexity : O(H) since here one goes from root down to a leaf.
+
+Space complexity : O(1).
 */
 public class ClosetBSTValue {
 
 
     public int closestValue(TreeNode root, double target) {
-        return findCloset(root, target, root.val);
+        int val;
+        int closest = root.val;
+
+        while (root != null) {
+            val = root.val;
+            closest = Math.abs(val - target) < Math.abs(closest - target) ? val : closest;
+            root =  target < root.val ? root.left : root.right;
+        }
+        return closest;
     }
 
-    public int findCloset(TreeNode node, double target, int value) {
-        if(node == null) {
-            return value;
-        }
-
-        // 如果新的 value 差距還比較大, 那新值就是 node.val
-        if(Math.abs(node.val - target) < Math.abs(value - target)) { //!!!
-            value = node.val; //!!
-        }
-
-
-        // target 比較大, 所以往右找
-        if (node.val < target) {
-            value = findCloset(node.right, target, value); //!!
-        } else  if(node.val > target) { // target 比較小, 所以往左找
-            value = findCloset(node.left, target, value); //!!
-        }
-
-        return value;
-    }
 
 //               4
 //              / \
-//             2  5
+//             2  5     4->2->3  Math.abs(3 - 3.7) < Math.abs(4 - 3.7) ? val : closest  => closest = 4
 //             /\
 //            1 3
     public static void main(String[] args) {

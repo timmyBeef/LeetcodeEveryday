@@ -31,7 +31,7 @@ head <->  node....<-> node <-> node <-> node <->  node   <-> tail
 
 
 
-use Hashmap + DoubleLinkedList:
+use Hashtable + DoubleLinkedList:
 
         We're asked to implement the structure which provides the following operations
         in O(1) time :
@@ -43,7 +43,7 @@ use Hashmap + DoubleLinkedList:
         Delete the first added key
 
         The first two operations in  O(1) time are provided by the standard hashmap,
-        and the last one - by linked list.
+        and the last one - by double linked list.
 */
 
 class DLinkedNode {
@@ -55,8 +55,7 @@ class DLinkedNode {
 
 public class LRUCacheNormal {
 
-    private Hashtable<Integer, DLinkedNode>
-            cache = new Hashtable<Integer, DLinkedNode>();
+    private Hashtable<Integer, DLinkedNode> cache = new Hashtable<>();
     private int count;
     private int capacity;
     private DLinkedNode head, tail;
@@ -74,7 +73,7 @@ public class LRUCacheNormal {
         tail = new DLinkedNode();
         tail.post = null;
 
-        head.post = tail;
+        head.post = tail;//doubly
         tail.pre = head;
     }
 
@@ -86,7 +85,7 @@ public class LRUCacheNormal {
         node.pre = head;
         node.post = head.post;
 
-        head.post.pre = node;
+        head.post.pre = node; //doubly
         head.post = node;
     }
 
@@ -109,7 +108,7 @@ public class LRUCacheNormal {
         this.addNode(node);
     }
 
-    // pop the current tail.
+    // pop the current tail. tail pre
     private DLinkedNode popTail(){
         DLinkedNode res = tail.pre;
         this.removeNode(res);
@@ -151,7 +150,7 @@ public class LRUCacheNormal {
                 --count;
             }
         } else {
-            // update the value.
+            // 若存在 update the value.
             node.value = value;
             this.moveToHead(node); // 剛用過放到最前面
         }

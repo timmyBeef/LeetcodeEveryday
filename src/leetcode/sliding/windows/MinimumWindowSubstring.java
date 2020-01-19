@@ -42,15 +42,23 @@ import java.util.*;
  */
 
 public class MinimumWindowSubstring {
+
+    private Map<Character, Integer> buildMap(String t) {
+        Map<Character, Integer> map = new HashMap<>();
+        for (char c : t.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+        return map;
+    }
+
     public String minWindow(String s, String t) {
 
         if (t.length() > s.length()) {
             return "";
         }
-        Map<Character, Integer> map = new HashMap<>();
-        for (char c : t.toCharArray()) {
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        }
+
+        Map<Character, Integer> map = this.buildMap(t);
+
         int counter = map.size();
 
         int begin = 0;
@@ -59,16 +67,25 @@ public class MinimumWindowSubstring {
         int len = Integer.MAX_VALUE; //record the result's len
 
         while (end < s.length()) { //!
+            System.out.println("begin:" + begin + ", end:" + end + ", counter:" + counter+ ", " +map.toString());
 
             // move right
             char c = s.charAt(end);
             if (map.containsKey(c)) {
                 map.put(c, map.get(c) - 1); //!!
-                if (map.get(c) == 0) counter--; //!!!!
+                if (map.get(c) == 0) {
+                    System.out.println("hit:" + c + ", do counter--");
+
+                    counter--; //!!!!
+                }
             }
+//            System.out.println("end:" + end + ", do ++");
+
             end++;
+            System.out.println("begin:" + begin + ", end:" + end + ", counter:" + counter+ ", " +map.toString());
 
             while (counter == 0) { //condition 代表 match 完了
+                System.out.println("***************counter == 0");
 
                 // move letf
                 // 所以左邊要開始繼續右移, 右移的過程中, 如果是原本符合的字, 要把 map 對應的 count +回去
@@ -76,6 +93,7 @@ public class MinimumWindowSubstring {
                 if (map.containsKey(tempc)) {
                     map.put(tempc, map.get(tempc) + 1); //!!
                     if (map.get(tempc) > 0) { //!!
+                        System.out.println("left exclude:" + tempc + ", do counter++");
                         counter++;
                     }
                 }
@@ -84,7 +102,11 @@ public class MinimumWindowSubstring {
                     len = end - begin;
                     head = begin;
                 }
+                System.out.println("increment begin");
+
                 begin++; // move letf
+                System.out.println("begin:" + begin + ", end:" + end + ", counter:" + counter+ ", " +map.toString() + ", head:" + head + ", len:" + len);
+
             }
 
         }

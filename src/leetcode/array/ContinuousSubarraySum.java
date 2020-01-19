@@ -68,7 +68,7 @@ public class ContinuousSubarraySum {
         map.put(0, -1);
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
-            if (k != 0) {//!!!!
+            if (k != 0) {//!!!! moder != 0
                 sum = sum % k; // 取得 % 後的 key
             }
             // map 有就不會更新!!! 因為有遇到符合的 應該就會回傳了...除非是[0,0] k=0

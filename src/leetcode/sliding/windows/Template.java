@@ -17,6 +17,7 @@ public class Template {
         for(char c : t.toCharArray()){
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
+
         //maintain a counter to check whether match the target string.
         int counter = map.size();//must be the map size, NOT the string size because the char may be duplicate.
 

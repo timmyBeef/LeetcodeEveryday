@@ -7,6 +7,8 @@ import java.util.Map;
 public class LengthOfLongestSubstring {
 
     /*
+        https://leetcode.com/problems/longest-substring-without-repeating-characters/
+
         same idea as sliding window
 
         if(map.get(c) > 1) counter++; => repeat char

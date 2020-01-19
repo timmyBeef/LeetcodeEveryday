@@ -6,6 +6,7 @@ import java.util.List;
 
 public class MinimumWinPrac {
     public String minWindow(String s, String t) {
+
         HashMap<Character, Integer> map = new HashMap<>();
         for (char c : t.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
@@ -20,7 +21,9 @@ public class MinimumWinPrac {
         while (right < s.length()) {
             char c = s.charAt(right);
             if (map.containsKey(c)) {
+
                 map.put(c, map.get(c) - 1);
+
                 if (map.get(c) == 0) {
                     count--;
                 }

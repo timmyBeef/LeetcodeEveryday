@@ -29,6 +29,14 @@ public class MergeKSortedLists {
 
         //重覆到 while(interval < lists.length) 結束
 
+        // 0, 0+1, i+=2, [0][1]
+        //                2  3
+        //                4  5
+
+        //interval*=2;
+        // 0, 2,   2, 4
+
+
         // 最後回傳 lists[0]
         int interval = 1;
         while(interval < lists.length){
@@ -108,4 +116,16 @@ class ListNode {
      int val;
      ListNode next;
      ListNode(int x) { val = x; }
+
+     public static void print(ListNode head) {
+         StringBuilder result = new StringBuilder();
+         ListNode current = head;
+         while (current.next != null) {
+             result.append(current.val).append("->");
+             current = current.next;
+         }
+         result.append(current.val);
+
+         System.out.println(result.toString());
+     }
 }

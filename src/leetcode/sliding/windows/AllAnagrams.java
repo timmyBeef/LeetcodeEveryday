@@ -45,10 +45,12 @@ public class AllAnagrams {
         List<Integer> result = new ArrayList<>(); //不一樣的地方
 
         if (t.length() > s.length()) return result;
+
         Map<Character, Integer> map = new HashMap<>();
         for (char c : t.toCharArray()) {
             map.put(c, map.getOrDefault(c, 0) + 1);
         }
+
         int counter = map.size();
 
         int begin = 0, end = 0;

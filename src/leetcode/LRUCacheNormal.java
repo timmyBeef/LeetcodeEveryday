@@ -93,11 +93,11 @@ public class LRUCacheNormal {
      * Remove an existing node from the linked list.
      */
     private void removeNode(DLinkedNode node){
-        DLinkedNode pre = node.pre;
-        DLinkedNode post = node.post;
+        DLinkedNode preNode = node.pre;
+        DLinkedNode postNode = node.post;
 
-        pre.post = post;
-        post.pre = pre;
+        preNode.post = postNode;
+        postNode.pre = preNode;
     }
 
     /**

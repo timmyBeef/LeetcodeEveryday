@@ -7,7 +7,9 @@ import java.util.Map;
 
     建 map, 算出種類counter
 
+    move end, minus counter
 
+    counter == 0 move begin, plus counter
  */
 public class MinimumWinPrac2 {
 

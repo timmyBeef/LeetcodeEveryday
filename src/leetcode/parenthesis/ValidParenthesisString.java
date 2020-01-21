@@ -1,12 +1,19 @@
 package leetcode.parenthesis;
 
-//https://leetcode.com/problems/valid-parenthesis-string/solution/
+/*
 
+678. Valid Parenthesis String
+
+https://leetcode.com/problems/valid-parenthesis-string/
+
+https://leetcode.com/problems/valid-parenthesis-string/solution/
+
+*/
 
 import java.util.Stack;
 
 /*
-    greedy - 目的做到 balanced
+    greedy - 目的做到 balanced: 左括號 LEFT和* 放入STACK,  右括號 做POP
 
     step1: When checking whether the string is valid, we only cared about the "balance":
 
@@ -20,6 +27,8 @@ import java.util.Stack;
 
      最後, left是空的話 ,成功, star 不用理他（可以當空的）
  */
+
+import java.util.Stack;
 
 /*
 Time complexity : O(n)
@@ -62,6 +71,7 @@ public class ValidParenthesisString {
         // NO way to balance the bracket. In other words, whenever there is a
         // left bracket index appears after the Last star, a false statement can be made.
 
+        //都不空, 做pop
         while (!leftID.isEmpty() && !starID.isEmpty()) {
             if (leftID.pop() > starID.pop())
                 return false;

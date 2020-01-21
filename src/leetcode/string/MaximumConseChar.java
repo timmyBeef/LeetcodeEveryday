@@ -6,7 +6,7 @@ public class MaximumConseChar {
         aabbcccd
         ans: c, 最常字元的第一個index: 4
 
-        OUTPUT 最常字元的第一個index
+        OUTPUT 最常字元的第一個 index
      */
 
     //參考 https://www.geeksforgeeks.org/maximum-consecutive-repeating-character-string/
@@ -26,9 +26,8 @@ public class MaximumConseChar {
         for (int i = 0; i < len; i++) {
             int cur_count = 1;
             for (int j = i + 1; j < len; j++) {
-                if (str.charAt(i) != str.charAt(j))
-                    break;
-                cur_count++;
+                if (str.charAt(i) == str.charAt(j))
+                    cur_count++;
             }
 
             // Update result if required

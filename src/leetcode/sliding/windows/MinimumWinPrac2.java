@@ -2,7 +2,13 @@ package leetcode.sliding.windows;
 
 import java.util.HashMap;
 import java.util.Map;
+/*
+    begin end, 決定window範圍
 
+    建 map, 算出種類counter
+
+
+ */
 public class MinimumWinPrac2 {
 
     private Map<Character, Integer> buildMap(String t) {
@@ -28,7 +34,7 @@ public class MinimumWinPrac2 {
         while(end < s.length()) {
             Character endChar = s.charAt(end);
 
-            if(map.containsKey(endChar)) {
+            if(map.containsKey(endChar)) { //移動end point
                 int feq = map.get(endChar);
                 map.put(endChar, feq--);
                 if(feq == 0) {
@@ -38,7 +44,7 @@ public class MinimumWinPrac2 {
 
             end++;
 
-            while(counter == 0) {
+            while(counter == 0) { //counter ==0 , 開始移動begin, 調整出最小window
                 Character beginChar = s.charAt(begin);
 
                 if(map.containsKey(beginChar)) {

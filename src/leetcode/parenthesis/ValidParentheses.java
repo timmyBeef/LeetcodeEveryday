@@ -23,28 +23,18 @@ we will end up pushing all the brackets onto the stack. e.g. ((((((((((.
  */
 public class ValidParentheses {
     public boolean isValid(String s) {
-        HashMap<Character, Character> map = new HashMap<>();
-        map.put(')', '(');
-        map.put(']', '[');
-        map.put('}', '{');
-
         Stack<Character> stack = new Stack<>();
-
-        for(int i = 0; i < s.length() ; i++) {
-            char c = s.charAt(i);
-
-            if(map.containsKey(c)) {
-                char topElement = stack.isEmpty() ? '#' : stack.pop(); //!!!
-
-                if(topElement != map.get(c)) { //!
-                    return false;
-                }
-            } else {
-                stack.push(c); //push value（左符號）, 用key檢查（右符號）, 因為不可能是 右開頭 這樣必錯
-            }
+        for (char c : s.toCharArray()) {
+            if (c == '(')
+                stack.push(')');
+            else if (c == '{')
+                stack.push('}');
+            else if (c == '[')
+                stack.push(']');
+            else if (stack.isEmpty() || stack.pop() != c)
+                return false;
         }
-
-        return stack.isEmpty(); //!!
+        return stack.isEmpty();
     }
 
     public static void main(String args[]) {

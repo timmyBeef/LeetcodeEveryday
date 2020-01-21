@@ -1,3 +1,5 @@
+package leetcode.array;
+
 import java.io.*;
 import java.util.*;
 
@@ -8,6 +10,8 @@ import java.util.*;
  * If you need more classes, simply define them inline.
  */
 
+
+// 前後(i with n-i)對調
 class ReverseArray {
   public static void main(String[] args) {
     int a[] = {1,3,4,5,6};

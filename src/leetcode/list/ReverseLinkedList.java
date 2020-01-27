@@ -1,8 +1,15 @@
 package leetcode.list;
 
+/*
 
-// https://leetcode.com/problems/reverse-linked-list/solution/
-// https://www.youtube.com/watch?v=O0By4Zq0OFc&feature=youtu.be
+206. Reverse Linked List
+
+    https://leetcode.com/problems/reverse-linked-list/
+
+
+    https://leetcode.com/problems/reverse-linked-list/solution/
+    https://www.youtube.com/watch?v=O0By4Zq0OFc&feature=youtu.be
+*/
 public class ReverseLinkedList {
 
 /*    Time complexity : O(n). Assume that n is the list's length,
@@ -12,31 +19,20 @@ public class ReverseLinkedList {
 
     1->2->3->4->5
 
-
-    curr->prev
-    1->pre=1
-
-    把 2 先暫存, 下次回圈 就能接上 上次的頭
-
-    2->pre=1
+    1->2
 
 
-
-    <-node<-cur
-
-            prev
-    cur->   curr -> prev
 */
     public ListNode reverseList(ListNode node) {
-        ListNode head = null;
-        ListNode curr = node;
+        ListNode head = null;//another list
+        ListNode curr = node;//maintain origin list
         while (curr != null) {
-            ListNode nextTemp = curr.next;
-            curr.next = head;
-            head = curr;
-            curr = nextTemp;
+            ListNode nextTemp = curr.next; //nextTemp = 2
+            curr.next = head; //2=head=null, next loop will 2->1
+            head = curr; //head = 1  head = 1, next loop head = 2
+            curr = nextTemp; //1=2(移動） curr =2
         }
-        return head; //prev 最後會變 head
+        return head; //head 是新list的頭
     }
 
     public ListNode reverseListAndClone(ListNode node) {
@@ -75,10 +71,10 @@ return 2
      */
     public ListNode reverseListByRecursive(ListNode head) {
         if (head == null || head.next == null) return head;
-        ListNode p = reverseListByRecursive(head.next);
+        ListNode newHead = reverseListByRecursive(head.next);
         head.next.next = head;
         head.next = null;
-        return p;
+        return newHead;
     }
 
     public static void main(String[] args) {

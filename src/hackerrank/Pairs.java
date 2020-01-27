@@ -2,6 +2,7 @@ package hackerrank;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.stream.IntStream;
 
 /*
 http://localhost:4000/2020/01/22/hackerrank-java-pair/
@@ -43,9 +44,21 @@ public class Pairs {
             aSet.add(a);
         }
 
+        IntStream.of(arr).distinct();
+
+
+
         return (int)aSet.stream()
                 .filter(b -> aSet.contains(b - k))
                 .count();
+
+    }
+
+    static int pairs4(int k, int[] arr) {
+
+        return (int)IntStream.of(arr).distinct().filter(b -> b == b - k)
+                .count();
+
 
     }
 }

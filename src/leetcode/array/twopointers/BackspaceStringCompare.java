@@ -15,12 +15,13 @@ public class BackspaceStringCompare {
                 else countS--;
                 i--;
             }
-            char left = i < 0 ? '@' : S.charAt(i);
             while (j >= 0 && (countT > 0 || T.charAt(j) == '#')) {
                 if (T.charAt(j) == '#') countT++;
                 else countT--;
                 j--;
             }
+
+            char left = i < 0 ? '@' : S.charAt(i);
             char right = j < 0 ? '@' : T.charAt(j);
             if (left != right) return false;
             i--;

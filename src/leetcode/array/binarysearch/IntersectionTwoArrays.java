@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.array.binarysearch;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -7,6 +7,39 @@ import java.util.stream.Collectors;
 
 // https://leetcode.com/problems/intersection-of-two-arrays/
 public class IntersectionTwoArrays {
+
+    /*
+    Sort both arrays, use two pointers
+
+    Time complexity: O(nlogn)
+     */
+    public int[] intersectionByTwoPointer(int[] nums1, int[] nums2) {
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+        int p1 = 0;
+        int p2 = 0;
+        Set<Integer> set = new HashSet<>();
+
+        while(p1 < nums1.length && p2 < nums2.length) {
+            if(nums1[p1] == nums2[p2]) {
+                set.add(nums1[p1]);
+                p1++;
+                p2++;
+            } else if(nums1[p1] > nums2[p2]) {
+                p2++;
+            } else {
+                p1++;
+            }
+        }
+
+        int result[] = new int[set.size()];
+
+        int i = 0;
+        for(Integer value:set) {
+            result[i++] = value;
+        }
+        return result;
+    }
 
     public int[] intersection(int[] nums1, int[] nums2) {
         Set<Integer> set = Arrays.stream(nums2).boxed().collect(Collectors.toSet());
@@ -40,6 +73,11 @@ public class IntersectionTwoArrays {
     }
 
     // 用bs去找另個 int[] 有沒有這個值了
+    /*
+    Binary search
+
+    Time complexity: O(nlogn)
+     */
     public int[] intersectionByBinarySearch(int[] nums1, int[] nums2) {
         Set<Integer> set = new HashSet<>();
         Arrays.sort(nums2);
@@ -53,6 +91,7 @@ public class IntersectionTwoArrays {
         for (Integer num : set) {
             result[i++] = num;
         }
+
         return result;
     }
 

@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.array.twopointers;
 
 import java.util.Arrays;
 
@@ -52,6 +52,26 @@ public class SquaresSortedArray {
             } else {
                 result[p] = A[right]*A[right];
                 right--;
+            }
+        }
+        return result;
+    }
+
+    //2020 version
+    public int[] sortedSquares2(int[] A) {
+        int result[] = new int[A.length];
+        int l = 0;
+        int r = A.length-1;
+        for(int i = A.length-1; i >=0; i--) {
+            int rPow = A[r]*A[r];
+            int lPow = A[l]*A[l];
+
+            if( rPow >= lPow) {
+                result[i] = rPow;
+                r--;
+            } else {
+                result[i] = lPow;
+                l++;
             }
         }
         return result;

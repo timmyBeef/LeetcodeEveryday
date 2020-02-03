@@ -1,4 +1,4 @@
-package leetcode.caculate;
+package leetcode.array.twopointers;
 
 import java.util.*;
 
@@ -34,6 +34,8 @@ first element of a triplet. For each possible first element we make a standard b
 2Sum sweep of the remaining part of the array.
 Also we want to skip equal elements to avoid duplicates in the answer
 without making a set or smth like that.
+
+    find nums[j]+nums[k] == -nums[i]
 
     step1: 先把資料做排序
 
@@ -114,6 +116,50 @@ Space complexity : O(1).
             }
         }
         return res;
+    }
+
+    //2020 version
+    public List<List<Integer>> threeSum2020(int[] nums) {
+
+        //本題回傳值不是index, 就在暗示...可以排序後處理
+        Arrays.sort(nums);
+
+        //注意！
+        //List<List<Integer>> result = new ArrayList<List<Integer>>();
+        List<List<Integer>> result = new ArrayList<>();
+
+
+        // a+b = -c
+        for(int i= 0; i < nums.length-2;i++) { // for 移動 nums[i] （-c)
+
+            // 排除 相同的 nums[i]
+            if(i > 0 && nums[i] == nums[i-1]) continue;
+
+            int l = i+1;
+            int r = nums.length - 1;
+            int sum = 0 - nums[i];  //a+b = -c
+
+            while(l < r) { // while 移動 其他兩數, 找 a+b = -c
+                if(nums[l] + nums[r] == sum) {
+                    result.add(Arrays.asList(nums[i], nums[l] , nums[r]));
+
+                    // 因為要排除紀錄過的相同值 （排除相同的 nums[l], nums[r]）
+                    while(l < r && nums[l] == nums[l+1]) {
+                        l++;
+                    }
+                    while(l < r && nums[r] == nums[r-1]) {
+                        r--;
+                    }
+                    l++;// 往下個
+                    r--;
+                } else if(nums[l] + nums[r] > sum) {
+                    r--;
+                } else {
+                    l++;
+                }
+            }
+        }
+        return result;
     }
 
     public static void main(String args[]) {

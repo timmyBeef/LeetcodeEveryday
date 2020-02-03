@@ -41,7 +41,7 @@ public class Subset {
     }
 
     private void backtrack(List<List<Integer>> list , List<Integer> tempList, int [] nums, int start){
-        list.add(new ArrayList<>(tempList)); //直接加入, 所以第一個是[], 因為這題是sunset, 所以不管是甚麼都要加入
+        list.add(new ArrayList<>(tempList)); //直接加入, 所以第一個是[], 因為這題是subset, 所以不管是甚麼都要加入
         for(int i = start; i < nums.length; i++){
             tempList.add(nums[i]);
             backtrack(list, tempList, nums, i + 1);

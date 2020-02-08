@@ -47,6 +47,7 @@ use n to through name
 
 最後檢查n是否跟name真的長度一樣
 
+time: o(n), space: o(1)
  */
 public class LongPressedName {
 
@@ -58,9 +59,9 @@ public class LongPressedName {
         int typedLen = typed.length();
 
         for (int t = 0; t < typedLen; t++) {
-            if (n < nameLen && name.charAt(n) == typed.charAt(t)) {
+            if (n < nameLen && name.charAt(n) == typed.charAt(t)) { // 一樣, 移動 name index
                 n++;
-            } else if (t == 0 || typed.charAt(t) != typed.charAt(t-1)) {
+            } else if (t == 0 || typed.charAt(t) != typed.charAt(t-1)) { //不一樣, 檢查typed cur index 和前一個index,    若0, 代表一開始就不一樣
                 return false;
             }
         }

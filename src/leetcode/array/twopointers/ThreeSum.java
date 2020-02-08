@@ -83,26 +83,64 @@ Time complexity : O(n^2).
 Space complexity : O(1).
 
 */
-    public List<List<Integer>> threeSum(int[] num) {
+
+    public List<List<Integer>> threeSum(int[] nums) {
+
+        Arrays.sort(nums);
+
+        List<List<Integer>> result = new ArrayList<>();
+
+        for (int i = 0; i < nums.length - 2; i++) {
+
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+
+            int l = i + 1;
+            int r = nums.length - 1;
+
+            while (l < r) {
+                int sum = 0 - nums[i];
+
+                if (nums[l] + nums[r] == sum) {
+                    result.add(Arrays.asList(nums[l], nums[r], nums[i]));
+                    while (l < r && nums[l] == nums[l + 1]) {
+                        l++;
+                    }
+                    while (l < r && nums[r] == nums[r - 1]) {
+                        r--;
+                    }
+                    l++;
+                    r--;
+                } else if (nums[l] + nums[r] > sum) {
+                    r--;
+                } else {
+                    l++;
+                }
+
+            }
+        }
+        return result;
+    }
+
+    public List<List<Integer>> threeSum2019(int[] num) {
 
         // 一定要排序, 之後才能正常淘汰一樣的數字
         Arrays.sort(num);
         List<List<Integer>> res = new LinkedList<>();
 
-        for (int i = 0; i < num.length-2; i++) {
+        for (int i = 0; i < num.length - 2; i++) {
 
-            if (i == 0 || (num[i] != num[i-1])) { // avoid duplicates !! i i-1 !!
-                int lo = i+1;
-                int hi = num.length-1;
+            if (i == 0 || (num[i] != num[i - 1])) { // avoid duplicates !! i i-1 !!
+                int lo = i + 1;
+                int hi = num.length - 1;
                 int sum = 0 - num[i]; // 0 - 目前某一數 ＝ sum = 其他2數和為, fixed 某數
 
                 while (lo < hi) { // others
                     if (num[lo] + num[hi] == sum) { // 找 其他 2數 ＝ sum
                         res.add(Arrays.asList(num[i], num[lo], num[hi])); // Arrays.asList(num, num, num)
-                        while (lo < hi && num[lo] == num[lo+1]) {  //!!!lo+1
+                        while (lo < hi && num[lo] == num[lo + 1]) {  //!!!lo+1
                             lo++;
                         }
-                        while (lo < hi && num[hi] == num[hi-1]) {  //!!!hi-1
+                        while (lo < hi && num[hi] == num[hi - 1]) {  //!!!hi-1
                             hi--;
                         }
                         lo++;
@@ -130,29 +168,29 @@ Space complexity : O(1).
 
 
         // a+b = -c
-        for(int i= 0; i < nums.length-2;i++) { // for 移動 nums[i] （-c)
+        for (int i = 0; i < nums.length - 2; i++) { // for 移動 nums[i] （-c)
 
             // 排除 相同的 nums[i]
-            if(i > 0 && nums[i] == nums[i-1]) continue;
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
 
-            int l = i+1;
+            int l = i + 1;
             int r = nums.length - 1;
             int sum = 0 - nums[i];  //a+b = -c
 
-            while(l < r) { // while 移動 其他兩數, 找 a+b = -c
-                if(nums[l] + nums[r] == sum) {
-                    result.add(Arrays.asList(nums[i], nums[l] , nums[r]));
+            while (l < r) { // while 移動 其他兩數, 找 a+b = -c
+                if (nums[l] + nums[r] == sum) {
+                    result.add(Arrays.asList(nums[i], nums[l], nums[r]));
 
                     // 因為要排除紀錄過的相同值 （排除相同的 nums[l], nums[r]）
-                    while(l < r && nums[l] == nums[l+1]) {
+                    while (l < r && nums[l] == nums[l + 1]) {
                         l++;
                     }
-                    while(l < r && nums[r] == nums[r-1]) {
+                    while (l < r && nums[r] == nums[r - 1]) {
                         r--;
                     }
                     l++;// 往下個
                     r--;
-                } else if(nums[l] + nums[r] > sum) {
+                } else if (nums[l] + nums[r] > sum) {
                     r--;
                 } else {
                     l++;

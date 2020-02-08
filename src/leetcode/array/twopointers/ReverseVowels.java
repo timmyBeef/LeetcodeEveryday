@@ -31,19 +31,19 @@ public class ReverseVowels {
 
         int l = 0;
         int r = s.length() - 1;
-        while (r >= l) {
-            while (r >= l && isNotVowel(s.charAt(l))) {
+        while (r > l) {
+            while (r > l && isNotVowel(s.charAt(l))) {
                 l++;
             }
-            while (r >= l && isNotVowel(s.charAt(r))) {
+            while (r > l && isNotVowel(s.charAt(r))) {
                 r--;
             }
-            if (r >= l) {
+            if (r > l) {
                 swap(sArray, l, r);
             } else {
                 return String.valueOf(sArray);
             }
-            l++;
+            l++; // 要注意喔！
             r--;
         }
         return String.valueOf(sArray);

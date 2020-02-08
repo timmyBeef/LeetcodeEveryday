@@ -1,4 +1,4 @@
-package leetcode.intervals;
+package leetcode.array.twopointers;
 
 // 986. Interval List Intersections
 // https://leetcode.com/problems/interval-list-intersections/

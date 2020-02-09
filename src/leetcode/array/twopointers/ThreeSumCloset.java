@@ -16,11 +16,46 @@ The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
 
 3 sum 的變種題
 
-
+O(n^2)
+O(1)
 
  */
 public class ThreeSumCloset {
+
     public int threeSumClosest(int[] nums, int target) {
+        // like 3 sum
+        // sort
+        // cacualte diff
+        // if minDiff > diff minDiff = diff
+        // if diff = 0 return target
+        // if diff < 0, l++, else r--
+        // return target+diff
+
+        Arrays.sort(nums);
+        int minDiff = Integer.MAX_VALUE;
+
+        for (int i = 0; i < nums.length -2 ; i++) {
+            int l = i + 1;
+            int r = nums.length - 1;
+            while (l < r) {
+                int diff = nums[l] + nums[r] + nums[i] - target;
+                if (Math.abs(minDiff) > Math.abs(diff)) {
+                    minDiff = diff;
+                }
+
+                if (diff == 0) {
+                    return target;
+                } else if (diff < 0) {
+                    l++;
+                } else {
+                    r--;
+                }
+            }
+        }
+        return target + minDiff;
+    }
+
+    public int threeSumClosestOld(int[] nums, int target) {
         Arrays.sort(nums);
 
         int minDiff = Integer.MAX_VALUE;

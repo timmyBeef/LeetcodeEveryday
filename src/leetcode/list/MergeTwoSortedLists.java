@@ -14,7 +14,7 @@ public class MergeTwoSortedLists {
     Space complexity : O(n+m)
 
     The first call to mergeTwoLists does not return until the ends of both l1 and l2
-    have been reached, so n + mn+m stack frames consume O(n+m) space.
+    have been reached, so n + m stack frames consume O(n+m) space.
  */
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {

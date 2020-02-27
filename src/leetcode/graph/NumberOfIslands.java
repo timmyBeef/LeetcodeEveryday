@@ -38,21 +38,27 @@ Output: 3
      condition limit: out of range && not island
      if (i < 0 || j < 0 || i >= n || j >= m || grid[i][j] != '1') return;
 
+    use flood fill, use dfs to traverse all island, and mark vistied
+
+    time complexity: O(n*m), space complexity: O(1), n is grid's height, m is grid's width
+
  */
 public class NumberOfIslands {
 
     private int n; // graph's height
     private int m; // width
+
     public int numIslands(char[][] grid) {
         n = grid.length;
-        if(n == 0) return 0;
+        if (n == 0) return 0;
+
         m = grid[0].length;
 
         int count = 0; // the count of island
 
-        for(int i=0; i < n; i++) {
-            for(int j= 0; j <m; j++) {
-                if(grid[i][j] == '1') { // an island's start
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (grid[i][j] == '1') { // an island's start
                     dfs(grid, i, j); //run dfs, run through an island
                     count++; // count of island++
                 }
@@ -62,12 +68,14 @@ public class NumberOfIslands {
     }
 
     private void dfs(char[][] grid, int i, int j) {
-        if(i < 0 || j < 0 || i >= n  || j >= m || grid[i][j] != '1') return;
+        if (i < 0 || j < 0 || i >= n || j >= m || grid[i][j] != '1') return;
+
         grid[i][j] = '0'; // mark visited
-        dfs(grid, i+1, j); // toward different directions...
-        dfs(grid, i-1, j);
-        dfs(grid, i, j+1);
-        dfs(grid, i, j-1);
+
+        dfs(grid, i + 1, j); // toward different directions...
+        dfs(grid, i - 1, j);
+        dfs(grid, i, j + 1);
+        dfs(grid, i, j - 1);
     }
 
     public static void main(String args[]) {

@@ -19,20 +19,21 @@ public class Sqrt {
         while (left <= right) {
             int mid = left + (right - left) / 2;
 
-            if (mid == x / mid) {
+            if (mid == x / mid) { // 4 8/4=2
                 return mid;
             } else if (mid < x / mid) {
                 left = mid + 1;
             } else {
-                right = mid - 1;
+                right = mid - 1; //3
             }
 
         }
+
         return right; // in the end, right must < left, so ans is right
     }
 
     public static void main(String[] args) {
-        System.out.print(new Sqrt().mySqrt(8));
+        System.out.println(new Sqrt().mySqrt(8));
 
         //System.out.print(new Sqrt().mySqrt(0));
 

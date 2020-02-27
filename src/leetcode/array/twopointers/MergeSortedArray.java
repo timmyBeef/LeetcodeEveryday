@@ -35,6 +35,22 @@ Space complexity :  O(1).
 public class MergeSortedArray {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
+        // 1. use two pointer
+        // 2. there is a enough space of nums1 to put nums1's data and nums2's data,
+        //    so create a m+n index to store the result
+        // 3. at last, if nums2 still has element, put them all into nums1
+        int p1 = m - 1;
+        int p2 = n - 1;
+        int p = m + n - 1;
+        while (p1 >= 0 && p2 >= 0) {
+            nums1[p--] = nums1[p1] < nums2[p2] ? nums2[p2--] : nums1[p1--];
+        }
+        while (p2 >= 0) {
+            nums1[p--] = nums2[p2--];
+        }
+    }
+
+    public void merge2019(int[] nums1, int m, int[] nums2, int n) {
         // two get pointers for nums1 and nums2
         int tail1 = m - 1;
         int tail2 = n - 1;

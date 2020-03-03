@@ -1,4 +1,4 @@
-package leetcode.array;
+package leetcode.array.binarysearch;
 
 //https://leetcode.com/problems/search-in-rotated-sorted-array/
 
@@ -42,7 +42,7 @@ public class SearchInRotatedSortedArray {
                 // make a judgement that which part is ordered and
                 // whether the target is in that range
                 if (target >= nums[mid] && target <= nums[end]) //in right part so start = mid+1
-                    start = mid + 1; //opposite outer
+                    start = mid+ 1; //opposite outer
                 else
                     end = mid - 1;
             }

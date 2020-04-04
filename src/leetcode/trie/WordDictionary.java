@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.trie;
 
 /*
 https://leetcode.com/problems/add-and-search-word-data-structure-design/

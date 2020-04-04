@@ -23,16 +23,16 @@ public class ReverseLinkedList {
 
 
 */
-    public ListNode reverseList(ListNode node) {
-        ListNode head = null;//another list
-        ListNode curr = node;//maintain origin list
+    public ListNode reverseList(ListNode head) {
+        ListNode nHead = null;//another list
+        ListNode curr = head;//maintain origin list
         while (curr != null) {
             ListNode nextTemp = curr.next; //nextTemp = 2
-            curr.next = head; //2=head=null, next loop will 2->1
-            head = curr; //head = 1  head = 1, next loop head = 2
+            curr.next = nHead; //2=head=null, next loop will 2->1
+            nHead = curr; //head = 1  head = 1, next loop head = 2
             curr = nextTemp; //1=2(移動） curr =2
         }
-        return head; //head 是新list的頭
+        return nHead; //head 是新list的頭
     }
 
     public ListNode reverseListAndClone(ListNode node) {

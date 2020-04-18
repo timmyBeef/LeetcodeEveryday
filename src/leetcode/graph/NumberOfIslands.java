@@ -44,6 +44,7 @@ Output: 3
 
  */
 public class NumberOfIslands {
+    public static final int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 
     private int n; // graph's height
     private int m; // width
@@ -72,10 +73,10 @@ public class NumberOfIslands {
 
         grid[i][j] = '0'; // mark visited
 
-        dfs(grid, i + 1, j); // toward different directions...
-        dfs(grid, i - 1, j);
-        dfs(grid, i, j + 1);
-        dfs(grid, i, j - 1);
+        for (int d[] : directions) {
+            dfs(grid, i + d[0], j + d[1]); // toward different directions...
+        }
+
     }
 
     public static void main(String args[]) {

@@ -85,8 +85,8 @@ public class ProductOfArrayExceptSelf {
         // res[0] = res[0] * nums[3] * nums[2] * num[1]
         // right = nums[3] * nums[2] * num[1]* num[0]
         for (int i = n - 1; i >= 0; i--) {
-            res[i] *= right;
-            right *= nums[i];
+            res[i] *= right;  // ori* 下面陣列
+            right *= nums[i]; // right: [a1a2a3, a2a3, a3  , 1]
         }
         return res;
     }

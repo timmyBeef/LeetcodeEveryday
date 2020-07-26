@@ -17,5 +17,6 @@ Leetcode, Hackerrank, Java 8 practice
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
 |100|[Same Tree](https://leetcode.com/problems/same-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SameTree.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SameTree.kt)      |          |         |
-|101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SymmetricTree.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/symmetric-tree.js)       |          |         |
+|101|[Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SymmetricTree.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SymmetricTree.js)       |          |         |
+|226|[Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/InvertBinaryTree.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/InvertBinaryTree.js)       |          |         |
 

@@ -1,3 +1,3 @@
-# Live Coding Practice
+# Leetcode everyday
 
 Leetcode, Hackerrank, Java 8 practice

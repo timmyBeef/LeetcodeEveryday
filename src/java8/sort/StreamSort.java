@@ -1,12 +1,8 @@
 package java8.sort;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
+
 /*
     transaction namber [1, 2, 3, 4, 1, 2]
 
@@ -68,10 +64,10 @@ public class StreamSort {
         //reverse another way
         //Comparator<List<Integer>> cmp = (o1, o2) -> (Integer) o2.get(0) - (Integer) o1.get(0);
 
-        Comparator<List<Integer>> cmp = Comparator.comparing(e->e.get(0));
+        Comparator<List<Integer>> cmp = Comparator.comparing(e -> e.get(0));
 
         List<List<Integer>> finalResult = result.stream()
-                .sorted(cmp.reversed().thenComparing(e->e.get(1)))
+                .sorted(cmp.reversed().thenComparing(e -> e.get(1)))
                 .collect(Collectors.toList());
 
         System.out.println("after:");
@@ -79,9 +75,30 @@ public class StreamSort {
         return finalResult;
     }
 
-    public static void main(String args[]) {
-        new StreamSort().findDistinctA();
+    public void printHeap(String s) {
 
-        new StreamSort().findDistinct();
+        Map<Character, Integer> map = new HashMap<>();
+        for (char c : s.toCharArray()) {
+            map.put(c, map.getOrDefault(c, 0) + 1);
+        }
+
+        // use freq to sort
+        PriorityQueue<Character> maxHeap = new PriorityQueue<>((a, b) -> map.get(b) - map.get(a));
+
+        maxHeap.addAll(map.keySet());
+
+        while (!maxHeap.isEmpty()) {
+            System.out.println(maxHeap.remove());
+        }
+
+    }
+
+    public static void main(String args[]) {
+        String str = "aabbbbbc";
+        StreamSort s = new StreamSort();
+        // new StreamSort().findDistinctA();
+
+        // new StreamSort().findDistinct();
+        s.printHeap(str);
     }
 }

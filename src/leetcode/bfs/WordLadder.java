@@ -46,39 +46,44 @@ public class WordLadder {
         return 0;
     }
 
-    public int ladderLengthBFS(String beginWord, String endWord, List<String> wordList) {
+    public int ladderLengthSingleBFS(String beginWord, String endWord, List<String> wordList) {
         Set<String> set = new HashSet<>(wordList);
-        if (set.size() == 0 | !set.contains(endWord)) {
+        if (set.size() == 0 || !set.contains(endWord)) {
             return 0;
         }
+        set.remove(beginWord);
+
         Queue<String> q = new LinkedList<>();
         q.offer(beginWord);
+
         int step = 1;
         while (!q.isEmpty()) {
-            int size = q.size();
-            for (int j = 0; j < size; j++) {
+            int qSize = q.size();
+            for (int i = 0; i < qSize; i++) { //BFS
                 String cur = q.poll();
-                char[] charArray = cur.toCharArray();
-
-                for (int i = 0; i < cur.length(); i++) {
-                    for (char letter = 'a'; letter <= 'z'; letter++) {
-                        charArray[i] = letter;
+                for (int j = 0; j < cur.length(); j++) {
+                    for (char c = 'a'; c <= 'z'; c++) { // replace char one by one
+                        char[] charArray = cur.toCharArray();
+                        charArray[j] = c;
                         String newWord = String.valueOf(charArray);
-                        if (set.contains(newWord)) {
-                            if (newWord.equals(endWord)) return step + 1;
-                            set.remove(newWord);
-                            q.offer(newWord);
+                        if (set.contains(newWord)) { // if set exists newWord
+                            if (newWord.equals(endWord)) { // find endword then return
+                                return step + 1;
+                            }
+                            q.offer(newWord); // other case, keep going
+                            set.remove(newWord); // remove newWord from set
                         }
+
                     }
                 }
-
             }
             step++;
         }
         return 0;
     }
 
+
     public static void main(String[] args) {
-        System.out.println(new WordLadder().ladderLengthBFS("hit", "cog", Arrays.asList("hot","dot","dog","lot","log","cog")));
+        System.out.println(new WordLadder().ladderLengthSingleBFS("hit", "cog", Arrays.asList("hot", "dot", "dog", "lot", "log", "cog")));
     }
 }

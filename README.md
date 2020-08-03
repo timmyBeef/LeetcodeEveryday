@@ -23,6 +23,7 @@ Leetcode, Hackerrank, Java 8 practice
 |112|[Path Sum](https://leetcode.com/problems/path-sum/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/PathSum.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/PathSum.js)       |          |         |
 |113|[Path Sum II](https://leetcode.com/problems/path-sum-ii/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/PathSum2.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/PathSum2.js)       |          |    backtracking     |
 |129|[Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SumRoottoLeafNumbers.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SumRoottoLeafNumbers.js)       |          |         |
+|111|[Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/MinimumDepthofBinaryTree.java)       |    **      |         |
 
 
 # DFS, BFS

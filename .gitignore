@@ -104,3 +104,8 @@ out/production/LeetCodePrac/META-INF/LeetCodePrac.kotlin_module
 .idea/sonarlint/issuestore/0/b/0baa9f73bea648667047b8199ac02f35ad68c087
 .idea/sonarlint/issuestore/0/5/05c8ebc1b0e834a46f36e70dba72c21cb5d2e73b
 .idea/sonarlint/issuestore/0/2/02fc5cec9f5dd9ea4bc2b353e9c5064fd8090aa5
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr

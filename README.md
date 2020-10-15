@@ -37,7 +37,7 @@ Leetcode, Hackerrank, Java 8 practice
 |364|[Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/BFSDFS)      |          |          |
 |127|[Word Ladder](https://leetcode.com/problems/word-ladder/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bfs/WordLadder.java)      |          |          |
 
-# Bit Manipulation
+# Bit Manipulation``
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
 |136|[Single Number](https://leetcode.com/problems/single-number/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/SingleNumber.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/SingleNumber.kt)      |          |          |

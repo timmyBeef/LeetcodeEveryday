@@ -37,3 +37,10 @@ Leetcode, Hackerrank, Java 8 practice
 |364|[Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/BFSDFS)      |          |          |
 |127|[Word Ladder](https://leetcode.com/problems/word-ladder/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bfs/WordLadder.java)      |          |          |
 
+# Bit Manipulation
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|136|[Single Number](https://leetcode.com/problems/single-number/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/SingleNumber.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/SingleNumber.kt)      |          |          |
+|191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/NumberOf1Bits.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/NumberOf1Bits.kt)      |          |          |
+|231|[Power of Two](https://leetcode.com/problems/power-of-two/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/PowerOfTwo.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/PowerOfTwo.kt)      |          |          |
+|389|[Find the Difference](https://leetcode.com/problems/find-the-difference/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/FindTheDifference.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/FindTheDifference.kt)      |          |          |

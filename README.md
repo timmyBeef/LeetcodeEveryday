@@ -47,3 +47,7 @@ Leetcode, Hackerrank, Java 8 practice
 |268|[Missing Number](https://leetcode.com/problems/missing-number/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/MissingNumber.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/MissingNumber.kt)      |          |          |
 |318|[Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/MaximumProductOfWordLengths.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/MaximumProductOfWordLengths.kt)      |          |          |
 |190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/ReverseBits.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/ReverseBits.kt)      |          |          |
+
+
+# HashSet
+|187|[Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/RepeatedDNASequences.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/RepeatedDNASequences.kt)      |          |          |

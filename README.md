@@ -48,6 +48,18 @@ Leetcode, Hackerrank, Java 8 practice
 |318|[Maximum Product of Word Lengths](https://leetcode.com/problems/maximum-product-of-word-lengths/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/MaximumProductOfWordLengths.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/MaximumProductOfWordLengths.kt)      |          |          |
 |190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/ReverseBits.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/ReverseBits.kt)      |          |          |
 
+# Array
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|243|[Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/ShortestWordDistance.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/ShortestWordDistance.kt)      |          |          |
+|252|[Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/MeetingRooms.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/MeetingRooms.kt)      |          |          |
+|253|[Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/MeetingRoomsII.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/MeetingRoomsII.kt)      |          |          |
+|209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/MinimumSizeSubarraySum.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/MinimumSizeSubarraySum.kt)      |          |          |
 
 # HashSet
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
 |187|[Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/RepeatedDNASequences.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/RepeatedDNASequences.kt)      |          |          |
+
+
+

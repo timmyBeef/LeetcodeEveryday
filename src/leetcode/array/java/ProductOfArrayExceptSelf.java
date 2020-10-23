@@ -1,4 +1,4 @@
-package leetcode.caculate;
+package leetcode.array.java;
 
 
 
@@ -7,13 +7,8 @@ import java.util.Arrays;
 // https://leetcode.com/problems/product-of-array-except-self/
 /*
 Input:  [1,2,3,4]
-Output: [24,12,8,6] => [1*2*3, 0*2*3, 0*1*3, 0*1*2]
+Output: [24,12,8,6]
 
-[a1*a2*a3, a0*a2*a3, a0*a1*a3, a0*a1*a2]
-目標：變成2陣列 相乘
-=>
-[1, a0, a0a1, a0a1a2]
-[a1a2a3, a2a3, a3 , 1]
 
 
 res[0] = 1;
@@ -41,9 +36,20 @@ Time complexity : O(N) where N represents the number of elements in the input ar
 We use one iteration to construct the array LL, one to update the array answeranswer.
 
 Space complexity : O(1) since don't use any additional array for our computations.
-The problem statement mentions that using the answeranswer array doesn't add to
+The problem statement mentions that using the answer array doesn't add to
 the space complexity.
 
+        [a1*a2*a3, a0*a2*a3, a0*a1*a3, a0*a1*a2]
+        目標：變成2陣列 相乘
+        =>
+        [1, a0, a0a1, a0a1a2]
+        [a1a2a3, a2a3, a3 , 1]
+
+        第一個 for, init 1, 從左乘
+        [1, a0, a0a1, a0a1a2]
+        第二個 for, init 1, 從右乘
+        [a1a2a3, a2a3, a3 , 1]
+        最後這兩個陣列相乘就是答案
 */
 public class ProductOfArrayExceptSelf {
     public int[] productExceptSelf(int[] nums) {
@@ -52,6 +58,7 @@ public class ProductOfArrayExceptSelf {
         res[0] = 1;
 
         /*
+
         res[0] = 1;
         res1 = res0*nums0 = 1*nums0
         res2 = res1*nums1 = 1*nums0*nums1

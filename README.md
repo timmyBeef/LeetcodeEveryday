@@ -49,16 +49,40 @@ Leetcode, Hackerrank, Java 8 practice
 |190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/java/ReverseBits.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bit/kotlin/ReverseBits.kt)      |          |          |
 
 # Array
+
+### Intervals
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|252|[Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MeetingRooms.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MeetingRooms.kt)      |          |    intervals      |
+|253|[Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MeetingRoomsII.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MeetingRoomsII.kt)      |          |    intervals      |
+
+### one way, two pointers
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|27|[Remove Element](https://leetcode.com/problems/remove-element/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/RemoveElement.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/RemoveElement.kt), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/RemoveElement.js)      |          |          |
+
+### two way, two pointers
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ContainerWithMostWater.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/ContainerWithMostWater.kt), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/ContainerWithMostWater.js)      |          |     two way, two pointers     |
+
+### sub array
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MinimumSizeSubarraySum.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MinimumSizeSubarraySum.kt)      |          |     one way, two pointers     |
+|238|[ProductOfArrayExceptSelf](https://leetcode.com/problems/product-of-array-except-self/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ProductOfArrayExceptSelf.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/ProductOfArrayExceptSelf.kt), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/ProductOfArrayExceptSelf.js)      |          |          |
+
+
+### 2D array
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|48|[Rotate Image](https://leetcode.com/problems/rotate-image/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/RotateImage.java)      |          |    2D Array      |
+|54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/SpiralMatrix.java)      |          |    2D Array      |
+
+### others
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
 |243|[Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ShortestWordDistance.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/ShortestWordDistance.kt)      |          |          |
-|252|[Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MeetingRooms.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MeetingRooms.kt)      |          |          |
-|253|[Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MeetingRoomsII.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MeetingRoomsII.kt)      |          |          |
-|209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MinimumSizeSubarraySum.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MinimumSizeSubarraySum.kt)      |          |     one way, two pointers     |
-|238|[ProductOfArrayExceptSelf](https://leetcode.com/problems/product-of-array-except-self/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ProductOfArrayExceptSelf.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/ProductOfArrayExceptSelf.kt), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/ProductOfArrayExceptSelf.js)      |          |          |
-|11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ContainerWithMostWater.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/ContainerWithMostWater.kt), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/ContainerWithMostWater.js)      |          |     two way, two pointers     |
-|48|[Rotate Image](https://leetcode.com/problems/rotate-image/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/RotateImage.java)      |          |    2D Array      |
-|54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/SpiralMatrix.java)      |          |    2D Array      |
 |277|[Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/FindTheCelebrity.java)      |          |          |
 |169|[Majority Element](https://leetcode.com/problems/majority-element/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MajorityElement.java)      |          |    moore voting algo      |
 

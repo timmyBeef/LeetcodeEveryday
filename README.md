@@ -59,6 +59,8 @@ Leetcode, Hackerrank, Java 8 practice
 |11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ContainerWithMostWater.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/ContainerWithMostWater.kt), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/ContainerWithMostWater.js)      |          |     two way, two pointers     |
 |48|[Rotate Image](https://leetcode.com/problems/rotate-image/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/RotateImage.java)      |          |    2D Array      |
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/SpiralMatrix.java)      |          |    2D Array      |
+|277|[Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/FindTheCelebrity.java)      |          |          |
+|169|[Majority Element](https://leetcode.com/problems/majority-element/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MajorityElement.java)      |          |    moore voting algo      |
 
 
 # HashSet

@@ -55,6 +55,7 @@ Leetcode, Hackerrank, Java 8 practice
 | --- | --- | -------- | -------- | -------- |
 |252|[Meeting Rooms](https://leetcode.com/problems/meeting-rooms/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MeetingRooms.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MeetingRooms.kt)      |          |    intervals      |
 |253|[Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MeetingRoomsII.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MeetingRoomsII.kt)      |          |    intervals      |
+|57|[Insert Interval](https://leetcode.com/problems/insert-interval/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/InsertInterval.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/InsertInterval.kt)      |          |    intervals      |
 
 ### one way, two pointers
 | No.    |   name  | solution | remark | comments |

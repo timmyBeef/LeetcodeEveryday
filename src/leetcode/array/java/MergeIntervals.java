@@ -1,4 +1,4 @@
-package leetcode.intervals;
+package leetcode.array.java;
 
 
 import java.util.*;
@@ -23,43 +23,35 @@ import java.util.*;
     add to result
 
 Time complexity : O(nlogn)
-Other than the sort invocation, we do a simple linear scan of the list,
-so the runtime is dominated by the O(nlgn) complexity of sorting.
-
 Space complexity : O(1) (or O(n))
+
 If we can sort intervals in place, we do not need more than constant additional space.
 Otherwise, we must allocate linear space to store a copy of intervals and sort that.
  */
 
 public class MergeIntervals {
     public int[][] merge(int[][] intervals) {
-        int length = intervals.length;
-        if (length <= 1)
-            return intervals;
+        if (intervals == null || intervals.length == 0
+                || intervals[0] == null || intervals[0].length == 0) return intervals;
 
-        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]); // remember to sort first
 
-        // {{1, 3}, {2, 6}, {8, 10}, {15, 18}};
-        List<int[]> result = new ArrayList<>();
+        List<int[]> res = new ArrayList<>();
+        int start = intervals[0][0];
+        int end = intervals[0][1];
 
-        int[] first = intervals[0];
-        int start = first[0];
-        int end = first[1];
-
-        // 跑所有, 重點是要更新 end
-        for(int[] interval : intervals){
-            if(end >= interval[0]){ // end > now start
-                end = Math.max(interval[1], end); // 取最大的 end
-            }else {
-                result.add(new int[]{start, end});
+        for (int interval[] : intervals) {
+            if (end >= interval[0]) { // intersection
+                end = Math.max(end, interval[1]);
+            } else { // no intersection
+                res.add(new int[]{start, end});
                 start = interval[0];
                 end = interval[1];
             }
         }
+        res.add(new int[]{start, end}); // for loop maybe end at if statement, so we should add the last result
 
-        result.add(new int[]{start, end});
-
-        return result.toArray(new int[result.size()][]);
+        return res.toArray(new int[res.size()][]);
     }
 
     public static void main(String[] args) {

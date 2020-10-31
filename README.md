@@ -80,6 +80,7 @@ Leetcode, Hackerrank, Java 8 practice
 |209|[Minimum Size Subarray Sum](https://leetcode.com/problems/minimum-size-subarray-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MinimumSizeSubarraySum.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MinimumSizeSubarraySum.kt)      |          |     one way, two pointers     |
 |238|[ProductOfArrayExceptSelf](https://leetcode.com/problems/product-of-array-except-self/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ProductOfArrayExceptSelf.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/ProductOfArrayExceptSelf.kt), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/ProductOfArrayExceptSelf.js)      |          |          |
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MaximumSubarray.java)      |          |          |
+|325|[Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MaximumSizeSubarraySumEqualsK.java)      |          |          |
 
 
 ### 2D array

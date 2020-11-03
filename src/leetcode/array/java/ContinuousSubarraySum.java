@@ -1,10 +1,20 @@
-package leetcode;
+package leetcode.array.java;
 
 import java.util.HashMap;
 import java.util.Map;
 
 //https://leetcode.com/problems/continuous-subarray-sum/
 /*
+leetcode 523
+數學題
+本題可以理解成這樣 （subarray sum % k = 0) =>  aj+1 + ... + an = |n1-n2|k
+
+所以可以變成這樣, 餘數一樣的時候, 能符合這題（subarray sum % k = 0)
+
+ai + .... aj           = n1k + q
+ai + .... aj + .... an = n2k + q
+=>
+aj+1 + ... + an = |n1-n2|k
 
 use hashmap
 
@@ -38,10 +48,9 @@ Now, assume that the given sum value at the i-th
   We can observe that  rem(rem+n∗k), which is the same value as stored corresponding
   to the i-th index..
 
-  Time complexity : O(n). Only one traversal of the array numsnums is done.
+  Time complexity : O(n).
 
-  Space complexity : O(min(n,k)). The HashMap can contain upto
-                     min(n,k) different pairings.
+  Space complexity : O(n)
 
 corner case
 [0,0] k=0
@@ -64,8 +73,8 @@ if (map.containsKey(sum)) {
 public class ContinuousSubarraySum {
     public boolean checkSubarraySum(int[] nums, int k) {
         int sum = 0;
-        HashMap<Integer, Integer> map = new HashMap<>();
-        map.put(0, -1);
+        Map<Integer, Integer> map = new HashMap<>();
+        map.put(0, -1); // for [0,0] k=0, return true
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
             if (k != 0) {//!!!! moder != 0

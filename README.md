@@ -82,6 +82,7 @@ Leetcode, Hackerrank, Java 8 practice
 |53|[Maximum Subarray](https://leetcode.com/problems/maximum-subarray/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MaximumSubarray.java)      |          |    DP      |
 |325|[Maximum Size Subarray Sum Equals k](https://leetcode.com/problems/maximum-size-subarray-sum-equals-k/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MaximumSizeSubarraySumEqualsK.java)      |          |    hashMap, like 2-sum      |
 |152|[Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MaximumProductSubarray.java)      |          |    max, min      |
+|523|[Continuous Subarray Sum](https://leetcode.com/problems/continuous-subarray-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ContinuousSubarraySum.java)      |          |    hashMap, ai+1 +...+ an = |n1-n2|k      |
 
 
 ### 2D array

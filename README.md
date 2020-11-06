@@ -73,6 +73,7 @@ Leetcode, Hackerrank, Java 8 practice
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
 |11|[Container With Most Water](https://leetcode.com/problems/container-with-most-water/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ContainerWithMostWater.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/ContainerWithMostWater.kt), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/ContainerWithMostWater.js)      |          |     two way, two pointers     |
+|42|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/TrappingRainWater.java)      |     *     |    two pointer     |
 
 ### sub array
 | No.    |   name  | solution | remark | comments |

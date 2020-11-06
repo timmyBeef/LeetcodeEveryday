@@ -1,8 +1,15 @@
-package leetcode.stack;
+package leetcode.array.java;
 
 import java.util.Stack;
 
 /*
+    method1: two pointer
+
+    time: O(n)
+    space:O(1)
+
+
+    method 2: not easy to write
     using stack to record index
     when should we caculate area? => when current height > stack's top elemnt height
 
@@ -10,7 +17,31 @@ import java.util.Stack;
  */
 public class TrappingRainWater {
 
+    // method 1
+    // find lower height (left or right)
+    // record left Max height or  right max height, res+= (leftmax or rightmax) - h[left or right]
     public int trap(int[] height) {
+        int left = 0;
+        int right = height.length - 1;
+        int res = 0;
+        int leftMax = 0;
+        int rightMax = 0;
+
+        while (left < right) {
+            if (height[left] < height[right]) {
+                leftMax = Math.max(leftMax, height[left]);
+                res += leftMax - height[left];
+                left++;
+            } else {
+                rightMax = Math.max(rightMax, height[right]);
+                res += rightMax - height[right];
+                right--;
+            }
+        }
+        return res;
+    }
+
+    public int trapByStack(int[] height) {
         if (height == null) return 0;
 
         Stack<Integer> s = new Stack<>(); // stack stores index

@@ -94,6 +94,13 @@ Leetcode, Hackerrank, Java 8 practice
 |48|[Rotate Image](https://leetcode.com/problems/rotate-image/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/RotateImage.java)      |          |    2D Array      |
 |54|[Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/SpiralMatrix.java)      |          |    2D Array      |
 
+### exchange
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|189|[Rotate Array](https://leetcode.com/problems/rotate-array/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/RotateArray.java)      |          |    reverse all, partial pre k revese, partial post k reverse      |
+|280|[Wiggle Sort](https://leetcode.com/problems/wiggle-sort/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/WiggleSort.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/WiggleSort.kt)      |          |    odd high, even low, not fit, do swap      |
+
+
 ### others
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |

@@ -108,6 +108,12 @@ Leetcode, Hackerrank, Java 8 practice
 |277|[Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/FindTheCelebrity.java)      |          |          |
 |169|[Majority Element](https://leetcode.com/problems/majority-element/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MajorityElement.java)      |          |    moore voting algo      |
 
+## array with HashSet 
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ContainsDuplicate.java)      |          |    easy one, hashset, or sort     |
+|575|[Distribute Candies](https://leetcode.com/problems/distribute-candies/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/DistributeCandies.java)      |          |         |
+
 
 # HashSet
 | No.    |   name  | solution | remark | comments |

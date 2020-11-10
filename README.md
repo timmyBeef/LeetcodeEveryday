@@ -114,6 +114,10 @@ Leetcode, Hackerrank, Java 8 practice
 |217|[Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ContainsDuplicate.java)      |          |    easy one, hashset, or sort     |
 |575|[Distribute Candies](https://leetcode.com/problems/distribute-candies/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/DistributeCandies.java)      |          |         |
 
+## array with HashMap 
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ContiguousArray.java)      |    **      |    0, 1 (-1, 1), hashMap (presum, idx)     |
 
 # HashSet
 | No.    |   name  | solution | remark | comments |

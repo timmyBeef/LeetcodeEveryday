@@ -118,6 +118,7 @@ Leetcode, Hackerrank, Java 8 practice
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
 |525|[Contiguous Array](https://leetcode.com/problems/contiguous-array/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ContiguousArray.java)      |    **      |    0, 1 (-1, 1), hashMap (presum, idx)     |
+|447|[Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/NumberOfBoomerangs.java)      |    **      |    hashMap (dist, poniter's count)     |
 
 # HashSet
 | No.    |   name  | solution | remark | comments |

@@ -121,6 +121,7 @@ Leetcode, Hackerrank, Java 8 practice
 |447|[Number of Boomerangs](https://leetcode.com/problems/number-of-boomerangs/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/NumberOfBoomerangs.java)      |    **      |    hashMap (dist, poniter's count)     |
 |532|[K-diff Pairs in an Array](https://leetcode.com/problems/k-diff-pairs-in-an-array/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/KDiffPairsInAnArray.java)      |    *      |    hashMap (num value, num's count), notice k = 0 case,    |
 |554|[Brick Wall](https://leetcode.com/problems/brick-wall/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/BrickWall.java)      |    *      |    hashMap (presum, presum's count), wall.size - max presum's count   |
+|599|[Minimum Index Sum of Two Lists](https://leetcode.com/problems/minimum-index-sum-of-two-lists/submissions/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MinimumIndexSumOfTwoLists.java)      |    *      |    hashMap (string, index)   |
 
 # HashSet
 | No.    |   name  | solution | remark | comments |

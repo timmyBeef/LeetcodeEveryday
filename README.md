@@ -107,6 +107,7 @@ Leetcode, Hackerrank, Java 8 practice
 |243|[Shortest Word Distance](https://leetcode.com/problems/shortest-word-distance/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/ShortestWordDistance.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/ShortestWordDistance.kt)      |          |          |
 |277|[Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/FindTheCelebrity.java)      |          |          |
 |169|[Majority Element](https://leetcode.com/problems/majority-element/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MajorityElement.java)      |          |    moore voting algo      |
+|442|[Find All Duplicates in an Array Element](https://leetcode.com/problems/find-all-duplicates-in-an-array/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/FindAllDuplicatesInAnArray.java)      |          |    index idea      |
 
 ## array with HashSet 
 | No.    |   name  | solution | remark | comments |

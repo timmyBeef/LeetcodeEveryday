@@ -10,7 +10,7 @@ package leetcode.array.java;
     count == 0 時紀錄結果 res
     最後會回傳 res 結果
 
-    [3, 2, 3] => 3 , 2 抵銷, 結果是 2
+    [3, 2, 3] => 3 , 2 抵銷, 結果是 3
     [2,2,1,1,1,2,2] => 2 1, 2 1, 2 1,抵銷, 結果是 2
 */
 class MajorityElement {

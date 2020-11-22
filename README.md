@@ -5,7 +5,7 @@ Leetcode, Hackerrank, Java 8 practice
 # Top Amazon Questions by Frequency 
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
-|1|[Two Sum](https://leetcode.com/problems/two-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/cacualte/TwoSum.java)      |          |          |
+|1|[Two Sum](https://leetcode.com/problems/two-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/caculate/TwoSum.java)      |          |          |
 |42|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/TrappingRainWater.java)      |     *     |    two pointer     |
 |200|[Number of Islands](https://leetcode.com/problems/number-of-islands/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/graph/NumberOfIslands.java)      |          |          |
 |146|[LRU Cache](https://leetcode.com/problems/lru-cache/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/LRUCacheNormal.java)     |          |          |

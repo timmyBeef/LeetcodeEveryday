@@ -40,7 +40,8 @@ Output: 3
 
     use flood fill, use dfs to traverse all island, and mark vistied
 
-    time complexity: O(n*m), space complexity: O(1), n is grid's height, m is grid's width
+    time complexity: O(n*m),
+    space complexity: O(1), n is grid's height, m is grid's width
 
  */
 public class NumberOfIslands {

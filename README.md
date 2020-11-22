@@ -2,6 +2,17 @@
 
 Leetcode, Hackerrank, Java 8 practice
 
+# Top Amazon Questions by Frequency 
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|1|[Two Sum](https://leetcode.com/problems/two-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/cacualte/TwoSum.java)      |          |          |
+|42|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/TrappingRainWater.java)      |     *     |    two pointer     |
+|200|[Number of Islands](https://leetcode.com/problems/number-of-islands/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/graph/NumberOfIslands.java)      |          |          |
+|146|[LRU Cache](https://leetcode.com/problems/lru-cache/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/LRUCacheNormal.java)     |          |          |
+|5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/string/LongestPalindromicSubstring.java)      |          |          |
+
+
+
 
 # Tree
 
@@ -130,6 +141,7 @@ Leetcode, Hackerrank, Java 8 practice
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
 |187|[Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/hashset/java/RepeatedDNASequences.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/hashset/kotlin/RepeatedDNASequences.kt)      |          |          |
+
 
 
 

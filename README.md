@@ -10,6 +10,7 @@ Leetcode, Hackerrank, Java 8 practice
 |200|[Number of Islands](https://leetcode.com/problems/number-of-islands/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/graph/NumberOfIslands.java)      |          |          |
 |146|[LRU Cache](https://leetcode.com/problems/lru-cache/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/LRUCacheNormal.java)     |          |          |
 |5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/string/LongestPalindromicSubstring.java)      |          |          |
+|763|[Partition Labels](https://leetcode.com/problems/partition-labels/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/PartitionLabels.java)      |          |   map, start end index two pointer     |
 
 
 

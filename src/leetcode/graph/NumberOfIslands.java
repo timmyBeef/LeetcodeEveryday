@@ -1,5 +1,8 @@
 package leetcode.graph;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /*
 
 Given a 2d grid map of '1's (land) and '0's (water),
@@ -41,11 +44,11 @@ Output: 3
     use flood fill, use dfs to traverse all island, and mark vistied
 
     time complexity: O(n*m),
-    space complexity: O(1), n is grid's height, m is grid's width
+    space complexity: O(n*m), n is grid's height, m is grid's width, dfs recursive stack
 
  */
 public class NumberOfIslands {
-    public static final int[][] directions = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+    public static final int[][] DIRECTIONS = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
 
     private int n; // graph's height
     private int m; // width
@@ -74,7 +77,7 @@ public class NumberOfIslands {
 
         grid[i][j] = '0'; // mark visited
 
-        for (int d[] : directions) {
+        for (int d[] : DIRECTIONS) {
             dfs(grid, i + d[0], j + d[1]); // toward different directions...
         }
 
@@ -92,5 +95,34 @@ public class NumberOfIslands {
 
         System.out.println("12345".substring(1));
 
+    }
+
+    // O(m*n)
+    // O(?), use example to explain it
+    private void bfs(int x, int y, char[][] grid) {
+        grid[x][y] = '0';
+        Queue<Integer> queue = new LinkedList<>();
+        queue.offer(x * n + y);
+        while (!queue.isEmpty()) {
+            int cur = queue.poll();
+            int i = cur / n;
+            int j = cur % n;
+            if (i > 0 && grid[i - 1][j] == '1') { // 少一步, 最少到 0
+                queue.offer((i - 1) * n + j);
+                grid[i - 1][j] = '0';
+            }
+            if (i < m - 1 && grid[i + 1][j] == '1') {// 多一步, 最多到 m
+                queue.offer((i + 1) * n + j);
+                grid[i + 1][j] = '0';
+            }
+            if (j > 0 && grid[i][j - 1] == '1') { // 少一步, 最少到 0
+                queue.offer(i * n + j - 1);
+                grid[i][j - 1] = '0';
+            }
+            if (j < n - 1 && grid[i][j + 1] == '1') {// 多一步, 最多到 m
+                queue.offer(i * n + j + 1);
+                grid[i][j + 1] = '0';
+            }
+        }
     }
 }

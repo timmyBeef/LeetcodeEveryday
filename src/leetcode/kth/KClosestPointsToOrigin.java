@@ -2,7 +2,6 @@ package leetcode.kth;
 
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.PriorityQueue;
 
 //https://leetcode.com/problems/k-closest-points-to-origin/
@@ -19,12 +18,12 @@ public class KClosestPointsToOrigin {
     // O(N)
     public int[][] kClosestByMaxHeap(int[][] points, int K) {
 
-        // 注意, 要右減左
+        // 注意, 要右減左, 找最近
         PriorityQueue<int[]> heap =
                 new PriorityQueue<int[]>((right, left) -> getDistance(right) - getDistance(left));
 
         for (int[] point: points) {
-            heap.add(point);
+            heap.offer(point);
             if (heap.size() > K)
                 heap.poll();
         }

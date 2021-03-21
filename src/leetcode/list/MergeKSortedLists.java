@@ -1,8 +1,66 @@
 package leetcode.list;
 
+import java.util.PriorityQueue;
+
 public class MergeKSortedLists {
 
-    // 相當 trick 的一題
+    /*
+        time: O(nlogk)
+        space: O(n)
+     */
+    // solution1
+    // use divide and conquer
+    public ListNode mergeKListsS1(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
+        return sort(lists, 0, lists.length - 1);
+    }
+
+    private ListNode sort(ListNode[] lists, int lo, int hi) {
+        if (lo >= hi) return lists[lo];
+
+        int mid = (hi - lo)/2 + lo;
+        ListNode l1 = sort(lists, lo, mid);
+        ListNode l2 = sort(lists, mid + 1, hi);
+        return merge(l1, l2);
+
+
+    }
+    private ListNode merge(ListNode l1, ListNode l2) {
+        if (l1 == null) return l2;
+        if (l2 == null) return l1;
+        if (l1.val < l2.val) {
+            l1.next = merge(l1.next, l2);
+            return l1;
+        }
+        l2.next = merge(l1, l2.next);
+        return l2;
+    }
+
+    // solution2
+    // use priorityQueue => easier
+    public ListNode mergeKListsS2(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(lists.length, (a, b) -> a.val - b.val);
+        ListNode dummy = new ListNode(-1);
+        ListNode cur = dummy;
+
+        for (ListNode list : lists) {
+            if (list != null) {
+                queue.add(list);
+            }
+        }
+        while (!queue.isEmpty()) {
+            cur.next = queue.poll();
+            cur = cur.next;
+            if (cur.next != null) {
+                queue.add(cur.next);
+            }
+        }
+        return dummy.next;
+    }
+
+    // solution 3
+    // 另一種 divide and conquer
     // mergeTwoList 用原本的
     // 因為 兩兩merge,
     // Thus, we'll traverse almost N nodes per pairing and merging,
@@ -12,7 +70,7 @@ public class MergeKSortedLists {
 /*  Time complexity : O(Nlogk) where k is the number of linked lists.
     Space complexity : O(1)  use mergeTwoListsByIter
 
-    We can merge two sorted linked lists in O(1)O(1) space.
+    We can merge two sorted linked lists in O(1) space.
     */
 
 

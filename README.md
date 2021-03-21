@@ -11,11 +11,14 @@ Leetcode, Hackerrank, Java 8 practice
 |1|[Two Sum](https://leetcode.com/problems/two-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/caculate/TwoSum.java)      |          |          |
 |42|[Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/TrappingRainWater.java)      |     *     |    two pointer     |
 |200|[Number of Islands](https://leetcode.com/problems/number-of-islands/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/graph/NumberOfIslands.java)      |          |          |
-|146|[LRU Cache](https://leetcode.com/problems/lru-cache/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/LRUCacheNormal.java)     |          |          |
+|146|[LRU Cache](https://leetcode.com/problems/lru-cache/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/design/LRUCacheNormal.java)     |          |          |
+|460|[LFU Cache](https://leetcode.com/problems/lfu-cache/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/design/LFUCache.java)     |          |          |
 |5|[Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/string/LongestPalindromicSubstring.java)      |          |          |
 |763|[Partition Labels](https://leetcode.com/problems/partition-labels/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/PartitionLabels.java)      |          |   map, start end index two pointer     |
 |973|[K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/kth/KClosestPointsToOrigin.java)      |          |   kth     |
 |819|[Most Common Word](https://leetcode.com/problems/most-common-word/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/string/MostCommonWord.java)      |          |        |
+|21|[Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/list/MergeTwoSortedLists.java)     |          |          |
+|23|[Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/list/MergeKSortedLists.java)     |          |          |
 
 
 

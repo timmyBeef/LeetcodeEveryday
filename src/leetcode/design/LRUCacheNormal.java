@@ -1,7 +1,4 @@
-package leetcode;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
+package leetcode.design;
 
 /*
 Time complexity : O(1) both for put and get since all operations with ordered dictionary :
@@ -15,7 +12,6 @@ import java.util.Hashtable;
 
 //Hashmap + DoubleLinkedList
 
-import java.util.Hashtable;
 
 /*
 

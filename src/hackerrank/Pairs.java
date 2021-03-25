@@ -46,8 +46,6 @@ public class Pairs {
 
         IntStream.of(arr).distinct();
 
-
-
         return (int)aSet.stream()
                 .filter(b -> aSet.contains(b - k))
                 .count();
@@ -60,5 +58,19 @@ public class Pairs {
                 .count();
 
 
+    }
+
+    static int pairs(int k, int[] arr) {
+        int count = 0;
+        Set<Integer> aSet = new HashSet<>();
+        for (int a : arr) {
+            aSet.add(a);
+        }
+        for (int b : aSet) {
+            if (aSet.contains(b-k)) {
+                count++;
+            }
+        }
+        return count;
     }
 }

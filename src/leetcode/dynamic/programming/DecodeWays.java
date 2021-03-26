@@ -2,6 +2,13 @@ package leetcode.dynamic.programming;
 
 // https://leetcode.com/problems/decode-ways/
 
+import com.sun.xml.internal.ws.util.StringUtils;
+
+import java.lang.reflect.Method;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.Period;
+
 /*
 I used a dp array of size n + 1 to save subproblem solutions.
 
@@ -54,9 +61,26 @@ public class DecodeWays {
         }
         return dp[n];
     }
-    public static void main(String[] args) {
-        String s = "227";
-        System.out.println(String.valueOf(new DecodeWays().numDecodings(s)));
+
+    public void test() {
+        System.out.println("test!!!!");
+    }
+    public static void main(String[] args) throws Exception {
+//        String s = "227";
+//        //System.out.println(String.valueOf(new DecodeWays().numDecodings(s)));
+//        LocalDate end = LocalDate.now();
+//        int count = 0;
+//        for (int i = 0; i < 24; i++) {
+//            System.out.println(end);
+//            end = end.minusMonths(1);
+//            count++;
+//
+//        }
+//        System.out.println(count);
+
+        System.out.println(LocalDate.now().getDayOfWeek());
+//        Method m = DecodeWays.class.getDeclaredMethod("test");
+//        m.invoke(new DecodeWays());
 
     }
 }

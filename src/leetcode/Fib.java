@@ -47,6 +47,11 @@ public class Fib {
 
         System.out.println(fib.fibStream(6));
 
+        long a = 0;
+        long b = 1555l;
+        System.out.println(Math.round(88.6));
+
+        System.out.println(Math.round(((float)(b-a)/(float)b)*100));
 
     }
 }

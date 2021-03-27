@@ -1,8 +1,6 @@
 package Interviews;
 
-import com.sun.xml.internal.ws.util.StringUtils;
 
-import java.time.LocalDate;
 
 public class StringTest {
     public static void main(String[] args) {

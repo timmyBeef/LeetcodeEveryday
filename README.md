@@ -151,9 +151,10 @@ Leetcode, Hackerrank, Java 8 practice
 | --- | --- | -------- | -------- | -------- |
 |187|[Repeated DNA Sequences](https://leetcode.com/problems/repeated-dna-sequences/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/hashset/java/RepeatedDNASequences.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/hashset/kotlin/RepeatedDNASequences.kt)      |          |          |
 
+# String
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|696|[Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/string/CountBinarySubstrings.java)      |          |          |
 
 
 
-
-
-[]: https://timmybeeflin.gitbook.io/cracking-leetcode/

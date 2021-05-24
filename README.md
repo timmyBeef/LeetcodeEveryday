@@ -79,6 +79,7 @@ Leetcode, Hackerrank, Java 8 practice
 |56|[Merge Intervals](https://leetcode.com/problems/merge-intervals/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MergeIntervals.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/kotlin/MergeIntervals.kt)      |          |    intervals      |
 |435|[Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/NonOverlappingIntervals.java)     |    **      |    intervals      |
 |436|[Find Right Interval](https://leetcode.com/problems/find-right-interval/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/FindRightInterval.java)     |    **      |    intervals, treeMap      |
+|729|[My Calendar I](https://leetcode.com/problems/my-calendar-i/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/intervals/MyCalendar.java)     |    **      |    intervals, treeMap      |
 
 ### one way, two pointers
 | No.    |   name  | solution | remark | comments |

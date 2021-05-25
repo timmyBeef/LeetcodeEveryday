@@ -157,5 +157,7 @@ Leetcode, Hackerrank, Java 8 practice
 | --- | --- | -------- | -------- | -------- |
 |696|[Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/string/CountBinarySubstrings.java)      |          |          |
 
-
-
+# Union find
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|261|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/unionfind/GraphValidTree.java)      |          |          |

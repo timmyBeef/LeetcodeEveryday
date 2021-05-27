@@ -163,3 +163,9 @@ Leetcode, Hackerrank, Java 8 practice
 |261|[Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/unionfind/GraphValidTree.java)      |          |          |
 |323|[Number of Connected Components in an Undirected Graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/unionfind/NumberOfConnectedUndirectedGraph.java)      |          |          |
 |547|[Number of Provinces](https://leetcode.com/problems/number-of-provinces/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/unionfind/NumberOfProvinces.java)      |          |          |
+
+# Binary Search
+|528|[Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/binarysearch/RandomPickWithWeight.java) [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/RandomPickWithWeight.js
+
+# Topology sort
+|207|[Course Schedule](https://leetcode.com/problems/course-schedule/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/topology/CourseSchedule.java)      |          |          |

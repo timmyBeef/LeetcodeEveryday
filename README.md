@@ -165,8 +165,12 @@ Leetcode, Hackerrank, Java 8 practice
 |547|[Number of Provinces](https://leetcode.com/problems/number-of-provinces/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/unionfind/NumberOfProvinces.java)      |          |          |
 
 # Binary Search
-|528|[Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/binarysearch/RandomPickWithWeight.java) [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/RandomPickWithWeight.js
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|528|[Random Pick with Weight](https://leetcode.com/problems/random-pick-with-weight/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/binarysearch/RandomPickWithWeight.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/js/RandomPickWithWeight.js)
 
 # Topology sort
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
 |207|[Course Schedule](https://leetcode.com/problems/course-schedule/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/topology/CourseSchedule.java)      |          |          |
 |210|[Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/topology/CourseScheduleII.java)      |          |          |

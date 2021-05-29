@@ -1,6 +1,9 @@
 package leetcode.array.java;
 
 /*
+243
+https://app.gitbook.com/@timmybeeflin/s/cracking-leetcode/hashtable/243.-shortest-word-distance
+
 Given a list of words and two words word1 and word2,
 return the shortest distance between these two words in the list.
 

@@ -147,6 +147,12 @@ Leetcode, Hackerrank, Java 8 practice
 |554|[Brick Wall](https://leetcode.com/problems/brick-wall/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/BrickWall.java)      |    *      |    hashMap (presum, presum's count), wall.size - max presum's count   |
 |599|[Minimum Index Sum of Two Lists](https://leetcode.com/problems/minimum-index-sum-of-two-lists/submissions/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MinimumIndexSumOfTwoLists.java)      |    *      |    hashMap (string, index)   |
 
+# HashMap
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|244|[Shortest Word Distance II](https://leetcode.com/problems/shortest-word-distance-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/hashmap/ShortestWordDistanceII.java)     |          |          |
+
+
 # HashSet
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |

@@ -42,7 +42,7 @@ Leetcode, Hackerrank, Java 8 practice
 |257|[Binary Tree Paths](https://leetcode.com/problems/binary-tree-paths/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/BinaryTreePaths.java)       |          |         |
 |112|[Path Sum](https://leetcode.com/problems/path-sum/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/PathSum.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/PathSum.js)       |          |         |
 |113|[Path Sum II](https://leetcode.com/problems/path-sum-ii/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/PathSum2.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/PathSum2.js)       |          |    backtracking     |
-|129|[Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-numbers/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SumRoottoLeafNumbers.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SumRoottoLeafNumbers.js)       |          |         |
+|129|[Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-items/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SumRoottoLeafNumbers.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SumRoottoLeafNumbers.js)       |          |         |
 |111|[Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/MinimumDepthofBinaryTree.java)       |    **     |    ref 104,111      |
 |104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/MaximumDepthOfBinaryTree.java)       |    **      |    ref 104,111      |
 
@@ -148,6 +148,12 @@ Leetcode, Hackerrank, Java 8 practice
 |554|[Brick Wall](https://leetcode.com/problems/brick-wall/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/BrickWall.java)      |    *      |    hashMap (presum, presum's count), wall.size - max presum's count   |
 |599|[Minimum Index Sum of Two Lists](https://leetcode.com/problems/minimum-index-sum-of-two-lists/submissions/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/java/MinimumIndexSumOfTwoLists.java)      |    *      |    hashMap (string, index)   |
 
+# easy array
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|12|[Integer to Roman](https://leetcode.com/problems/integer-to-roman/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/array/IntegerToRoman.java)      |      |        |
+
+
 # HashMap
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
@@ -162,6 +168,7 @@ Leetcode, Hackerrank, Java 8 practice
 # String
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
+|13|[Roman to Integer](https://leetcode.com/problems/roman-to-integer/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/lang.translation/RomanToInteger.java)      |          |          |
 |696|[Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/string/CountBinarySubstrings.java)      |          |          |
 
 # Union find

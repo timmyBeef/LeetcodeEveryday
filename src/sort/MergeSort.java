@@ -1,4 +1,4 @@
-package Interviews.sort;
+package sort;
 
 import java.util.Arrays;
 

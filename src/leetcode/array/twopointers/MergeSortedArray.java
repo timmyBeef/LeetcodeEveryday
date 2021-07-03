@@ -22,6 +22,14 @@ Input:
 nums1 = [1,2,3,0,0,0], m = 3
 nums2 = [2,5,6],       n = 3
 
+nums1[p1] = 3 < nums2 5,6
+1, 2, 3, 0, 5 , 6
+nums1[p1] = 3 nums2 [p2] = 2
+1 2 3 3 5 6
+
+nums1[p1] = 2, nums2 [p2] = 2
+1 2 2 3 5 6
+
 Output: [1,2,2,3,5,6]
 
 num1 後面還有空間, so put value into num1...

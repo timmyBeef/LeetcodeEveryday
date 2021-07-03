@@ -188,3 +188,9 @@ Leetcode, Hackerrank, Java 8 practice
 | --- | --- | -------- | -------- | -------- |
 |207|[Course Schedule](https://leetcode.com/problems/course-schedule/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/topology/CourseSchedule.java)      |          |          |
 |210|[Course Schedule II](https://leetcode.com/problems/course-schedule-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/topology/CourseScheduleII.java)      |          |          |
+
+# path - Dijkstra's algo
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|1102|[Path With Maximum Minimum Value](https://leetcode.com/problems/path-with-maximum-minimum-value/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/path/PathWithMaximumMinimumValue.java)      |          |          |
+|1631|[Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/path/PathWithMinimumEffort.java)      |          |          |

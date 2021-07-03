@@ -13,16 +13,13 @@ import java.util.Map;
     space: O(n)
  */
 public class ShortestWordDistanceII {
-    private Map<String, List<Integer>> map = new HashMap<>();
+    private Map<String, List<Integer>> map;
     public ShortestWordDistanceII(String[] wordsDict) {
+        map = new HashMap<>();
         for (int i = 0; i < wordsDict.length ; i++) {
             String w = wordsDict[i];
-            List<Integer> data = new ArrayList<>();
-            if (map.containsKey(w)) {
-                data = map.get(w);
-            }
+            List<Integer> data = map.getOrDefault(w, new ArrayList<>());
             data.add(i);
-
             map.put(w, data);
         }
     }

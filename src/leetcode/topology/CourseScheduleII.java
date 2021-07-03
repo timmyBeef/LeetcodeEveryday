@@ -1,5 +1,6 @@
 package leetcode.topology;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -17,6 +18,7 @@ public class CourseScheduleII {
         for (int p[] : prerequisites) {
             indegree[p[0]]++;
         }
+        System.out.println(Arrays.toString(indegree));
 
         int k = 0;
         Queue<Integer> queue = new LinkedList<>();
@@ -24,8 +26,11 @@ public class CourseScheduleII {
             if (indegree[i] == 0) {
                 queue.offer(i);
                 res[k++] = i;
+                System.out.println("indegree == 0");
             }
         }
+        System.out.println(Arrays.toString(res));
+
         while (!queue.isEmpty()) {
             int pre = queue.poll();
             for (int p[] : prerequisites) {
@@ -39,5 +44,9 @@ public class CourseScheduleII {
             }
         }
         return (k == numCourses) ? res : new int[0];
+    }
+
+    public static void main(String[] args) {
+        new CourseScheduleII().findOrder(2, new int[][]{{0,1},{1,0}});
     }
 }

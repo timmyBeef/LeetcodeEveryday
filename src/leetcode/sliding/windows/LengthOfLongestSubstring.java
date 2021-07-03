@@ -77,7 +77,7 @@ public class LengthOfLongestSubstring {
         int i = 0, maxLen = 0;
         for (int j = 0; j < s.length(); j++) {
             while (exist[s.charAt(j)]) { // 重複時, 開始移動i的位置, 直到沒有重複的位置
-                exist[s.charAt(i)] = false; //因為持續往左移動, 所以會把原本重複的字, 更新掉成不出現
+                exist[s.charAt(i)] = false; //因為持續往右移動, 所以會把原本重複的字, 更新掉成不出現
                 i++;
             }
             exist[s.charAt(j)] = true;

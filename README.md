@@ -52,6 +52,11 @@ Leetcode, Hackerrank, Java 8 practice
 |199|[Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/bfs/BinaryTreeRightSideView.java)      |          |         |
 |515|[Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/bfs/FindLargestValueInEachTreeRow.java)       |          |         |
 
+## backtracking + hashmap
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|437|[Path Sum III](https://leetcode.com/problems/path-sum-iii/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/PathSumIII.java)      |          |         |
+
 
 # DFS, BFS
 | No.    |   name  | solution | remark | comments |

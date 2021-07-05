@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.unionfind;
 
 
 import java.util.*;
@@ -223,7 +223,6 @@ class DSU {
     /*      y
            /
           x
-
      */
     // x's root's parent = y's root
     public void union(int x, int y) {

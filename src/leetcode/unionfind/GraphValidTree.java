@@ -32,11 +32,11 @@ public class GraphValidTree {
 
         // union find
         int root[] = new int[n];
-        for (int i = 0; i < n ; i++) {
+        for (int i = 0; i < n ; i++) { // 初始化
             root[i] = -1;
         }
 
-        for (int[] e : edges) {
+        for (int[] e : edges) { // 這部分其實就是 union
             int x = unionFind(root, e[0]);
             int y = unionFind(root, e[1]);
             if (x == y) return false;
@@ -44,7 +44,7 @@ public class GraphValidTree {
         }
         return true;
     }
-    private int unionFind(int root[], int i) {
+    private int unionFind(int root[], int i) { // find
         while (root[i] != -1) {
             i = root[i];
         }

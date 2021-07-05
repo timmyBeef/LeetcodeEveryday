@@ -14,12 +14,12 @@ public class NumberOfProvinces {
 
         int res = n;
         int roots[] = new int[n];
-        for (int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) { // init
             roots[i] = -1;
         }
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < isConnected[0].length; j++) {
-                if (isConnected[i][j] == 1) {
+                if (isConnected[i][j] == 1) { // union part
                     int x = find(roots, i);
                     int y = find(roots, j);
                     if (x != y) {
@@ -32,7 +32,7 @@ public class NumberOfProvinces {
         }
         return res;
     }
-    private int find(int[] roots, int i) {
+    private int find(int[] roots, int i) { //find part
         while (roots[i] != -1) {
             i = roots[i];
         }

@@ -33,7 +33,7 @@ Leetcode, Hackerrank, Java 8 practice
 |144|[Binary Tree Preorder Traversal](https://leetcode.com/problems/binary-tree-preorder-traversal/)                 |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/basic/BinaryTreePreorderTraversal.java)      |          |     DFS preorder     |
 |145|[Binary Tree Postorder Traversal](https://leetcode.com/problems/binary-tree-postorder-traversal/)               |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/basic/BinaryTreePostorderTraversal.java)       |          |     DFS postorder     |
 
-## Preorder
+## Preorder DFS
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
 |100|[Same Tree](https://leetcode.com/problems/same-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SameTree.java), [Kotlin](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SameTree.kt)      |          |         |
@@ -45,6 +45,12 @@ Leetcode, Hackerrank, Java 8 practice
 |129|[Sum Root to Leaf Numbers](https://leetcode.com/problems/sum-root-to-leaf-items/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SumRoottoLeafNumbers.java), [Javascript](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/SumRoottoLeafNumbers.js)       |          |         |
 |111|[Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/MinimumDepthofBinaryTree.java)       |    **     |    ref 104,111      |
 |104|[Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/preorder/MaximumDepthOfBinaryTree.java)       |    **      |    ref 104,111      |
+
+## Tree level order BFS
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|199|[Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/bfs/BinaryTreeRightSideView.java)      |          |         |
+|515|[Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/bfs/FindLargestValueInEachTreeRow.java)       |          |         |
 
 
 # DFS, BFS

@@ -52,6 +52,12 @@ Leetcode, Hackerrank, Java 8 practice
 |199|[Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/bfs/BinaryTreeRightSideView.java)      |          |         |
 |515|[Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/bfs/FindLargestValueInEachTreeRow.java)       |          |         |
 
+## Tree inorder
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+L(https://leetcode.com/problems/validate-binary-search-tree/)           |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/trees/inorder/ValidateBinarySearchTree.java)      |          |         |
+
+
 ## backtracking + hashmap
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
@@ -67,6 +73,7 @@ Leetcode, Hackerrank, Java 8 practice
 |339|[Nested List Weight Sum](https://leetcode.com/problems/nested-list-weight-sum/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/BFSDFS)      |          |          |
 |364|[Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/BFSDFS)      |          |          |
 |127|[Word Ladder](https://leetcode.com/problems/word-ladder/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bfs/WordLadder.java)      |          |          |
+|433|[Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bfs/MinimumGeneticMutation.java)      |          |          |
 
 # Bit Manipulation
 | No.    |   name  | solution | remark | comments |
@@ -169,6 +176,7 @@ Leetcode, Hackerrank, Java 8 practice
 | No.    |   name  | solution | remark | comments |
 | --- | --- | -------- | -------- | -------- |
 |244|[Shortest Word Distance II](https://leetcode.com/problems/shortest-word-distance-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/hashmap/ShortestWordDistanceII.java)     |          |          |
+|1160|[Find Words That Can Be Formed by Characters](https://leetcode.com/problems/find-words-that-can-be-formed-by-characters/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/hashmap/FindWordsThatCanBeFormedByCharacters.java)     |          |          |
 
 
 # HashSet
@@ -205,3 +213,8 @@ Leetcode, Hackerrank, Java 8 practice
 | --- | --- | -------- | -------- | -------- |
 |1102|[Path With Maximum Minimum Value](https://leetcode.com/problems/path-with-maximum-minimum-value/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/path/PathWithMaximumMinimumValue.java)      |          |          |
 |1631|[Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/path/PathWithMinimumEffort.java)      |          |          |
+
+# DP
+| No.    |   name  | solution | remark | comments |
+| --- | --- | -------- | -------- | -------- |
+|70|[Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/dynamic/programming/ClimbingStairs.java)      |          |          |

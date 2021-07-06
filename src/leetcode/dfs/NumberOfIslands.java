@@ -1,4 +1,4 @@
-package leetcode.graph;
+package leetcode.dfs;
 
 import java.util.LinkedList;
 import java.util.Queue;

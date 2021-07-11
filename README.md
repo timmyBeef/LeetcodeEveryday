@@ -74,6 +74,9 @@ L(https://leetcode.com/problems/validate-binary-search-tree/)           |    [Ja
 |364|[Nested List Weight Sum II](https://leetcode.com/problems/nested-list-weight-sum-ii/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/BFSDFS)      |          |          |
 |127|[Word Ladder](https://leetcode.com/problems/word-ladder/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bfs/WordLadder.java)      |          |          |
 |433|[Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bfs/MinimumGeneticMutation.java)      |          |          |
+|317|[Shortest Distance from All Buildings](https://leetcode.com/problems/shortest-distance-from-all-buildings/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bfs/ShortestDistanceFromAllBuildings.java)      |          |          |
+|542|[01 Matrix](https://leetcode.com/problems/01-matrix/)                    |    [Java](https://github.com/timmyBeef/LeetcodeEveryday/blob/master/src/leetcode/bfs/ZeroOneMatrix.java)      |          |          |
+
 
 # Bit Manipulation
 | No.    |   name  | solution | remark | comments |
